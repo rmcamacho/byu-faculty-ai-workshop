@@ -1,0 +1,9 @@
+assignment_id,title,points_possible,due_at,lecture_reference,synthetic_results
+HW1.1,"Homework 1.1 (Voltage, Current, Power, and Sign Conventions)",12,2026-09-18T23:59:00-06:00,Lecture 1,True
+HW1.2,Homework 1.2 (Ohm's Law and Kirchhoff's Laws),23,2026-09-18T23:59:00-06:00,Lecture 2,True
+HW2.4,"Homework 2.4 (Resistor Networks, Voltage and Current Division)",8,2026-09-25T23:59:00-06:00,Lecture 7,True
+HW3.1,"Homework 3.1 (Source Transformations, Thevenin Equivalence, Maximum Power Transfer)",9,2026-10-02T23:59:00-06:00,Lecture 8,True
+HW3.3,Homework 3.3 (Node Voltage and Supernodes),11,2026-10-02T23:59:00-06:00,Lecture 10,True
+UQ1,Unit Quiz 1,20,2026-09-18T23:59:00-06:00,Unit 1,True
+UQ2,Unit Quiz 2,100,2026-09-25T23:59:00-06:00,Unit 2,True
+UQ3,Unit Quiz 3,100,2026-10-02T23:59:00-06:00,Lectures 8-11,True

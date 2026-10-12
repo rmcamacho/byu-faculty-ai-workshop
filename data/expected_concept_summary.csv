@@ -1,0 +1,7 @@
+assignment_id,concept,earned,possible,percent,graded_parts
+UQ3,Source equivalence,115,138,83.3333,92
+UQ3,Battery models,73,92,79.3478,92
+UQ3,Node voltage,32,46,69.5652,23
+UQ3,DAC,54,69,78.2609,69
+HW3.3,Node voltage,71,154,46.1039,154
+HW3.3,Supernodes,46,88,52.2727,88

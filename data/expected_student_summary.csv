@@ -1,0 +1,25 @@
+student_id,percent,grade,earned,possible,outreach_candidate,d_plus_watch,missing,incomplete_evidence
+DEMO-01,46.8035,E,132.454,283,True,False,HW3.1; HW3.3; UQ2,False
+DEMO-02,34.2443,E,96.9114,283,True,False,,False
+DEMO-03,49.2352,E,139.3356,283,True,False,,False
+DEMO-04,82.6624,B-,151.2722,183,False,False,,True
+DEMO-05,84.3927,B,229.5482,272,False,False,,False
+DEMO-06,81.8658,B-,212.851,260,False,False,,False
+DEMO-07,52.9692,E,149.9029,283,True,False,UQ3,False
+DEMO-08,68.2595,D+,193.1744,283,False,True,,False
+DEMO-09,81.6469,B-,231.0607,283,False,False,,False
+DEMO-10,83.3021,B,235.745,283,False,False,,False
+DEMO-11,79.7564,C+,225.7105,283,False,False,,False
+DEMO-12,86.9921,B,246.1876,283,False,False,,False
+DEMO-13,84.6218,B,239.4798,283,False,False,,False
+DEMO-14,87.9494,B+,248.8968,283,False,False,,False
+DEMO-15,79.6159,C+,225.313,283,False,False,,False
+DEMO-16,79.2701,C+,224.3344,283,False,False,,False
+DEMO-17,75.7223,C,214.294,283,False,False,,False
+DEMO-18,90.4435,A-,255.955,283,False,False,,False
+DEMO-19,90.0935,A-,254.9645,283,False,False,,False
+DEMO-20,73.335,C,207.5381,283,False,False,,False
+DEMO-21,71.7834,C-,203.1471,283,False,False,,False
+DEMO-22,90.02,A-,254.7565,283,False,False,,False
+DEMO-23,87.8184,B+,248.5261,283,False,False,,False
+DEMO-24,90.805,A-,256.9781,283,False,False,,False

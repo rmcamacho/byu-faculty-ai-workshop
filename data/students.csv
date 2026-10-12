@@ -1,0 +1,25 @@
+student_id,display_name,email,fictional
+DEMO-01,Demo Student 01,student01@example.invalid,True
+DEMO-02,Demo Student 02,student02@example.invalid,True
+DEMO-03,Demo Student 03,student03@example.invalid,True
+DEMO-04,Demo Student 04,student04@example.invalid,True
+DEMO-05,Demo Student 05,student05@example.invalid,True
+DEMO-06,Demo Student 06,student06@example.invalid,True
+DEMO-07,Demo Student 07,student07@example.invalid,True
+DEMO-08,Demo Student 08,student08@example.invalid,True
+DEMO-09,Demo Student 09,student09@example.invalid,True
+DEMO-10,Demo Student 10,student10@example.invalid,True
+DEMO-11,Demo Student 11,student11@example.invalid,True
+DEMO-12,Demo Student 12,student12@example.invalid,True
+DEMO-13,Demo Student 13,student13@example.invalid,True
+DEMO-14,Demo Student 14,student14@example.invalid,True
+DEMO-15,Demo Student 15,student15@example.invalid,True
+DEMO-16,Demo Student 16,student16@example.invalid,True
+DEMO-17,Demo Student 17,student17@example.invalid,True
+DEMO-18,Demo Student 18,student18@example.invalid,True
+DEMO-19,Demo Student 19,student19@example.invalid,True
+DEMO-20,Demo Student 20,student20@example.invalid,True
+DEMO-21,Demo Student 21,student21@example.invalid,True
+DEMO-22,Demo Student 22,student22@example.invalid,True
+DEMO-23,Demo Student 23,student23@example.invalid,True
+DEMO-24,Demo Student 24,student24@example.invalid,True

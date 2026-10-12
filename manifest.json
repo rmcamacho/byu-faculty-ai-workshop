@@ -1,0 +1,21 @@
+{
+  "title": "Faculty LS Demo \u2014 Synthetic Student Results",
+  "version": "2026-10-11-v1",
+  "snapshot": "2026-10-16T10:00:00-06:00",
+  "course_url": "https://learningsuite.byu.edu/.dr2r/cid-qn1ynCTVWQDe/home",
+  "synthetic": true,
+  "student_count": 24,
+  "assessment_count": 8,
+  "source": "Assignment names, maxima, copied due dates, grade scale and selected question structure verified in the development course October 11. All student identities, results, statuses, TA hours and approvals are invented.",
+  "grading": "Demo subset: total points, no drops. Missing overdue work is zero; excused, extension_not_due and submitted_ungraded are excluded from numerator and denominator. UQ3 raw 15 points scale to 100. Full possible total 283.",
+  "outreach": "D or below means D/D-/E: percent <67. D+ (67 to <70) is a separate watch band. This is an explicit demo interpretation, not a university-wide threshold.",
+  "limitations": [
+    "Development courses have no enrolled students or working student gradebook; CSV files are content attachments, not native enrollments or recorded grades.",
+    "Source syllabus describes full-course weighted categories and dropped scores; that policy does NOT govern this reduced demo dataset.",
+    "Only HW3.3 and UQ3 have problem-level data; do not invent missed questions for other assignments.",
+    "Copied lecture links still point to original Google decks. Read them for proposals; do not edit originals during demos.",
+    "Native student-specific exceptions and real gradebook analysis require supported test enrollments elsewhere; demonstrate proposed changes locally.",
+    "Course questions and source decks are not included in this public repository; do not redistribute copyrighted questions or solutions without permission."
+  ],
+  "support_source": "https://softwaresupport.byu.edu/learning-suite/instructor/setup-and-basics/course-setup"
+}
