@@ -6,11 +6,11 @@ Run everything in a **local** terminal (Terminal, PowerShell, or VS Code's integ
 
 ## Download the Workshop
 
-Open https://github.com/rmcamacho/faculty-ls-demo, choose **Code > Download ZIP**, and extract it. No GitHub account is needed. Or:
+Open https://github.com/rmcamacho/byu-faculty-ai-workshop, choose **Code > Download ZIP**, and extract it. No GitHub account is needed. Or:
 
 ```sh
-git clone https://github.com/rmcamacho/faculty-ls-demo.git
-cd faculty-ls-demo
+git clone https://github.com/rmcamacho/byu-faculty-ai-workshop.git
+cd byu-faculty-ai-workshop
 ```
 
 Open a terminal in this folder (the one containing `README.md`). In VS Code: **File > Open Folder**, then **Terminal > New Terminal**.
@@ -40,11 +40,11 @@ In the terminal, still in this folder:
 
 ```text
 codex plugin marketplace add .
-codex plugin add byu-faculty-integrations@faculty-ls-demo
+codex plugin add byu-faculty-integrations@byu-faculty-ai-workshop
 codex plugin list
 ```
 
-The list should show `byu-faculty-integrations@faculty-ls-demo` as installed and enabled.
+The list should show `byu-faculty-integrations@byu-faculty-ai-workshop` as installed and enabled.
 
 Start Codex again in this folder and check:
 

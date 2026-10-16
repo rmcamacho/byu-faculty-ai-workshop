@@ -2,7 +2,7 @@
 
 A self-guided companion to the October 16, 2026 faculty lunch and learn. You will connect Codex to BYU systems and practice one safe workflow on realistic tasks: **inspect, preview, confirm, apply, verify**.
 
-Repository: https://github.com/rmcamacho/faculty-ls-demo
+Repository: https://github.com/rmcamacho/byu-faculty-ai-workshop
 
 ## The Path
 
