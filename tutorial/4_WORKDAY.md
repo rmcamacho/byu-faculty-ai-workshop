@@ -26,7 +26,7 @@ Compare with [answers/workday.md](../answers/workday.md#part-b). Notice that the
 
 Workday holds other people's personal and financial information. Before using AI on live Workday pages, check the current BYU ChatGPT Edu data guidance, and start with your own finance reports rather than tasks containing student or employee details.
 
-1. In the dedicated browser from [setup](1_SETUP.md#start-the-dedicated-browser), sign in through https://workday.byu.edu/ and complete BYU authentication yourself.
+1. In the Chrome window Codex uses ([setup](1_SETUP.md)), sign in through https://workday.byu.edu/ and complete BYU authentication yourself.
 2. Find your report:
 
    > Workday is open on my home page. Confirm the BYU tenant and that the signed-in name is mine. Then tell me how to open the budget-versus-actuals report linked in my Financial Services email, or search Workday for its exact current name. Do not run anything yet.
@@ -39,6 +39,6 @@ Workday holds other people's personal and financial information. Before using AI
 
    > List my inbox task titles, types, and due dates. Do not open any task or press any control.
 
-You're done. Stop the dedicated browser:
+You're done. In the CLI, stop the dedicated browser:
 
 > Stop the dedicated CLI Chrome session. Leave the profile on my computer.

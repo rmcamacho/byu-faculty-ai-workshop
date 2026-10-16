@@ -21,7 +21,7 @@ node --test tests/cli_tools.test.mjs
 ## Validation Status
 
 - Tested: answer checkers; the nine browser-helper tests on Linux with Node 24; plugin installation from a clean ZIP extraction with Codex CLI 0.153 on Linux; the course copy settings on the owner account.
-- Not yet tested: a participant's Mac or Windows install and browser launch; a second faculty account copying the course end to end; that account's Google Slides access; the Kuali and Workday skills against live pages from a participant's machine. Use [PILOT_CHECKLIST.md](PILOT_CHECKLIST.md) before presenting the setup as fully tested.
+- Not yet tested: the ChatGPT desktop app path (whether the repository marketplace appears in its Plugins Directory without the CLI, and Chrome control through its extension); a participant's Mac or Windows install and browser launch; a second faculty account copying the course end to end; that account's Google Slides access; the Kuali and Workday skills against live pages from a participant's machine. Use [PILOT_CHECKLIST.md](PILOT_CHECKLIST.md) before presenting the setup as fully tested.
 
 ## Traffic History
 

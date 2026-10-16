@@ -42,7 +42,7 @@ Compare with [answers/kuali.md](../answers/kuali.md#part-b). The point is not th
 
 Only with a proposal you are authorized to edit, and only after screening its files for restricted data, export-controlled material, and personal information:
 
-1. In the dedicated browser from [setup](1_SETUP.md#start-the-dedicated-browser), sign into Kuali through your usual BYU link and open the proposal.
+1. In the Chrome window Codex uses ([setup](1_SETUP.md)), sign into Kuali through your usual BYU link and open the proposal.
 2. Read only:
 
    > My proposal is open. Confirm the visible proposal number, title, PI, and sponsor. Read the General, Budget, and Attachments sections and compare them with my local proposal folder at [PATH]. Report discrepancies as in Part B. Do not change anything.

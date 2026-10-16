@@ -1,6 +1,6 @@
 # BYU Learning Suite, Kuali and Workday for Codex
 
-This portable Codex plugin provides three workflows that share one dedicated browser and one safety pattern:
+This portable Codex plugin provides three workflows that share one browser connection and one safety pattern:
 
 - **BYU Learning Suite (`$byu-learning-suite`):** inspect, plan, copy, configure, and safely update a course through an authenticated browser.
 - **BYU Kuali (`$byu-kuali`):** organize proposal development, keep narrative, budget, and attachments synchronized, and carefully update a Kuali record with preview, confirmation, and verification.
@@ -26,8 +26,8 @@ Grading judgments and student messaging in Learning Suite, certification, routin
 
 ## Requirements
 
-- Codex CLI with local-file access, including Codex CLI in VS Code's integrated terminal. The Codex IDE sidebar does not currently load plugins.
-- Node.js 22 or newer and Google Chrome for live browser work.
+- The ChatGPT desktop app with its Chrome plugin and extension, which controls the user's own signed-in Chrome; or
+- Codex CLI (including in VS Code's integrated terminal) with Node.js 22 or newer and Google Chrome, which uses a dedicated Chrome profile and the guarded task runner in `scripts/`. The Codex IDE sidebar does not currently load plugins.
 - Your own access to the relevant course, proposal, or Workday reports.
 
 ## Example Prompts

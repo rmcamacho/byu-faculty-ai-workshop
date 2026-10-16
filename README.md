@@ -8,7 +8,7 @@ Repository: https://github.com/rmcamacho/byu-faculty-ai-workshop
 
 | Step | Guide | Time | Needs |
 | --- | --- | --- | --- |
-| 1 | [Set up Codex and the plugin](tutorial/1_SETUP.md) | 15 min, once | Codex, Node.js, Chrome |
+| 1 | [Set up Codex and the plugin](tutorial/1_SETUP.md) | 15 min, once | ChatGPT desktop app or Codex CLI, Chrome |
 | 2 | [Learning Suite](tutorial/2_LEARNING_SUITE.md): student outreach, teaching improvement, course changes | 30 min | Your own LS development copy |
 | 3 | [Kuali](tutorial/3_KUALI.md): funding search and keeping a proposal in sync *(optional)* | 25 min | Nothing beyond step 1 |
 | 4 | [Workday](tutorial/4_WORKDAY.md): research balances and inbox triage *(optional)* | 15 min | Nothing beyond step 1 |

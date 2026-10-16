@@ -11,7 +11,7 @@ Help a faculty member understand their own Workday finance reports and task inbo
 
 1. Use the BYU CES ChatGPT Edu identity for BYU work, not a personal ChatGPT account.
 2. Workday pages can contain other people's personal and financial information: student and employee names, expense details, payroll, and HR records. Follow the current BYU ChatGPT Edu Data Guidelines. Do not open or read a task, report, or worker profile containing restricted data or identifiable student data unless the user confirms it is permitted. De-identify people in summaries whenever possible.
-3. The user signs in through BYU's Workday entry page (https://workday.byu.edu/) in the dedicated browser and navigates to a safe starting page. Never request or store passwords, Duo codes, cookies, or browser-profile data. If Workday shows a sign-in, Duo, or "remember this device" step, the user completes it.
+3. The user signs in through BYU's Workday entry page (https://workday.byu.edu/) in the browser Codex controls (the user's own Chrome in the ChatGPT desktop app, or the dedicated CLI browser) and navigates to a safe starting page. Never request or store passwords, Duo codes, cookies, or browser-profile data. If Workday shows a sign-in, Duo, or "remember this device" step, the user completes it.
 4. Confirm the visible tenant (the BYU Workday tenant on myworkday.com) and that the signed-in name matches the user before reading anything.
 
 ## Read Workflows
