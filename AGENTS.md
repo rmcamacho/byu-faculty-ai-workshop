@@ -9,3 +9,5 @@ exercises and locate items by title; template IDs do not identify copied items.
 Check answers with `python3 scripts/check_answers.py`. Regenerate the dataset with
 `python3 build_demo.py`; verify data and manifest changes before committing. Keep
 expected answers consistent with the stated snapshot, exclusions and grade policy.
+Build the complete shareable ZIP with `python3 scripts/build_workshop.py`; inspect
+its allowlisted contents and verify a clean extraction before distributing it.

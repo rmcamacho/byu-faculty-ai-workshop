@@ -52,6 +52,8 @@ Any live demo edit should target this development course explicitly and be verif
 
 ## Rebuild and checks
 
-Run `python3 build_demo.py` (Python standard library only). It deterministically regenerates 24 students, 192 assessment records, 552 question-part records, expected summaries and the ZIP. Assertions check joins, point ranges, scaling, excluded-work denominators and non-deliverable addresses. It never connects to LS.
+Run `python3 build_demo.py` (Python standard library only). It deterministically regenerates 24 students, 192 assessment records, 552 question-part records, expected summaries and the synthetic-data ZIP. Assertions check joins, point ranges, scaling, excluded-work denominators and non-deliverable addresses. It never connects to LS.
+
+Run `python3 scripts/build_workshop.py` to check the answers and create the complete shareable `faculty-ls-workshop-v2.zip` from an explicit allowlist. The archive includes the examples, setup, copy, presenter and participant-pilot guides; it excludes local browser state and intermediate presentation files.
 
 Continue with tutorial/START_HERE.md and tutorial/COPY_COURSE.md. Detailed prompts, worked answers and a 20-minute presenter script are included. Run python3 scripts/check_answers.py to independently verify the calculations. The CLI setup guide pins the existing browser plugin; a participant-machine installation and second-faculty copy dry run remain to be tested. See tutorial/PARTICIPANT_PILOT.md.

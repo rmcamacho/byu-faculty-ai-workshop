@@ -1,6 +1,7 @@
 """Build reproducible, entirely fictional workshop data; never contacts Learning Suite."""
 from pathlib import Path
 import csv
+from hashlib import sha256
 import json
 import random
 import zipfile
@@ -161,10 +162,16 @@ assert next(s for s in summary if s['student_id']=='DEMO-05')['possible']==272
 assert next(s for s in summary if s['student_id']=='DEMO-06')['possible']==260
 assert all(s['email'].endswith('@example.invalid') for s in students)
 
-with zipfile.ZipFile(ROOT/'faculty-ls-demo-synthetic-v1.zip','w',zipfile.ZIP_DEFLATED) as z:
-    for p in sorted(DATA.glob('*.csv')): z.write(p,'data/'+p.name)
-    for name in ('README.md','manifest.json','build_demo.py'):
-        z.write(ROOT/name,name)
+archive = ROOT/'faculty-ls-demo-synthetic-v1.zip'
+archive_files = [(p, 'data/'+p.name) for p in sorted(DATA.glob('*.csv'))]
+archive_files += [(ROOT/name, name) for name in ('README.md','manifest.json','build_demo.py')]
+with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+    for path, archive_name in archive_files:
+        info = zipfile.ZipInfo(archive_name, (2026,10,16,10,0,0))
+        info.compress_type = zipfile.ZIP_DEFLATED
+        info.create_system = 3
+        info.external_attr = 0o100644 << 16
+        z.writestr(info,path.read_bytes(),compress_type=zipfile.ZIP_DEFLATED,compresslevel=9)
 print(json.dumps(dict(students=len(students),assessments=len(assignments),question_rows=len(detail),
     outreach_candidates=[s['student_id'] for s in summary if s['outreach_candidate']],
-    archive=str(ROOT/'faculty-ls-demo-synthetic-v1.zip'),checks='passed'),indent=2))
+    archive=str(archive),sha256=sha256(archive.read_bytes()).hexdigest(),checks='passed'),indent=2))
