@@ -1,19 +1,23 @@
 {
   "name": "byu-faculty-integrations",
   "version": "0.1.0",
-  "description": "Portable Codex workflows for BYU Kuali proposal preparation and read-only Workday finance and task review.",
+  "description": "Portable Codex workflows for BYU Learning Suite course administration, Kuali proposal preparation, and read-only Workday finance and task review.",
   "author": {
     "name": "BYU Faculty Productivity Contributors"
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "BYU Kuali and Workday",
-    "shortDescription": "Safer AI workflows for proposals, research finances and Workday tasks.",
-    "longDescription": "Helps BYU faculty prepare and carefully update Kuali proposal records, and read Workday finance reports and inbox tasks without approving or submitting anything.",
+    "displayName": "BYU Learning Suite, Kuali and Workday",
+    "shortDescription": "Safer AI workflows for courses, proposals, research finances and Workday tasks.",
+    "longDescription": "Helps BYU faculty inspect, plan, and carefully apply changes in Learning Suite, prepare and carefully update Kuali proposal records, and read Workday finance reports and inbox tasks without approving or submitting anything.",
     "developerName": "BYU Faculty Productivity Contributors",
     "category": "Productivity",
-    "capabilities": ["Interactive", "Write"],
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
     "defaultPrompt": [
+      "Help me prepare my Learning Suite course.",
       "Help me organize and update a Kuali proposal.",
       "Summarize my Workday research balances and inbox without approving anything."
     ]

@@ -1,7 +1,7 @@
 {
   "name": "faculty-ls-demo",
   "interface": {
-    "displayName": "Faculty Workshop Integrations"
+    "displayName": "Faculty AI Workshop"
   },
   "plugins": [
     {

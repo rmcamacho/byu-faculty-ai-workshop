@@ -1,6 +1,6 @@
 # Adaptive Browser Task Scripts
 
-Use this mode for prompt-driven Kuali or Workday work from Codex CLI, including Codex CLI in VS Code's integrated terminal. It supports varied tasks rather than a fixed catalog of domain commands.
+Use this mode for prompt-driven Learning Suite, Kuali, or Workday work from Codex CLI, including Codex CLI in VS Code's integrated terminal. It supports varied tasks rather than a fixed catalog of domain commands.
 
 ## Model
 
@@ -59,7 +59,7 @@ Resolve the plugin root from the loaded skill path. From the skill directory, th
 
 1. Start the dedicated Chrome session as described in [CLI Browser Mode](cli-browser.md).
 2. Ask the user to sign in and navigate to a safe page.
-3. Confirm the visible proposal or signed-in Workday identity before creating the task.
+3. Confirm the visible course, proposal, or signed-in Workday identity before creating the task.
 4. Generate the smallest task script needed for the requested outcome.
 5. Run without `--apply`:
 
@@ -78,4 +78,4 @@ Never treat an earlier broad request as confirmation for the apply run. If the l
 
 ## Reuse
 
-Task scripts may be retained in the user's private workspace when they are broadly reusable and contain no identifiers or protected data. Keep proposal numbers, worktag IDs, dates, names, and other instance-specific values in local input files. Never add live task inputs, snapshots, or browser profiles to the distributed plugin.
+Task scripts may be retained in the user's private workspace when they are broadly reusable and contain no identifiers or protected data. Keep course IDs, proposal numbers, worktag IDs, dates, names, and other instance-specific values in local input files. Never add live task inputs, snapshots, or browser profiles to the distributed plugin.

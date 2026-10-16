@@ -52,7 +52,7 @@ Any live demo edit should target this development course explicitly and be verif
 
 ## Beyond Learning Suite: Kuali and Workday
 
-The repository also includes optional integrations for two more BYU systems, each with its own tutorial and synthetic exercises: [Kuali proposals](integrations/kuali/TUTORIAL.md) (funding search, proposal workspaces and record sync) and [Workday](integrations/workday/TUTORIAL.md) (read-only finance reports and inbox triage). They install as a separate Codex plugin from this repository; start with [integrations/SETUP.md](integrations/SETUP.md). The Kuali skill, funding exercise and browser scripts are borrowed from the ECEN faculty AI tutorial. The Workday skill never approves, submits or creates transactions.
+The repository also includes optional integrations for two more BYU systems, each with its own tutorial and synthetic exercises: [Kuali proposals](integrations/kuali/TUTORIAL.md) (funding search, proposal workspaces and record sync) and [Workday](integrations/workday/TUTORIAL.md) (read-only finance reports and inbox triage). One Codex plugin in this repository, `byu-faculty-integrations`, covers Learning Suite, Kuali and Workday, so the setup guide installs everything at once; see [integrations/README.md](integrations/README.md). The Kuali skill, funding exercise and browser scripts are borrowed from the ECEN faculty AI tutorial. The Workday skill never approves, submits or creates transactions.
 
 ## Rebuild and checks
 
@@ -62,4 +62,4 @@ Run `python3 scripts/check_integrations.py` to check the Kuali and Workday arith
 
 Run `python3 scripts/build_workshop.py` to check the answers and create the complete shareable `faculty-ls-workshop-v2.zip` from an explicit allowlist. The archive includes the examples, setup, copy, presenter and participant-pilot guides, and the Kuali and Workday integrations; it excludes local browser state and intermediate presentation files.
 
-Continue with tutorial/START_HERE.md and tutorial/COPY_COURSE.md. Detailed prompts, worked answers and a 20-minute presenter script are included. Run python3 scripts/check_answers.py to independently verify the calculations. The CLI setup guide pins the existing browser plugin; a participant-machine installation and second-faculty copy dry run remain to be tested. See tutorial/PARTICIPANT_PILOT.md.
+Continue with tutorial/START_HERE.md and tutorial/COPY_COURSE.md. Detailed prompts, worked answers and a 20-minute presenter script are included. Run python3 scripts/check_answers.py to independently verify the calculations. The CLI setup guide installs the repository's plugin, whose Learning Suite skill is unchanged from the August ECEN plugin; a participant-machine installation and second-faculty copy dry run remain to be tested. See tutorial/PARTICIPANT_PILOT.md.

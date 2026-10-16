@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PLUGIN = ROOT / "plugins/byu-faculty-integrations"
 KUALI = ROOT / "integrations/kuali"
 WORKDAY = ROOT / "integrations/workday"
-SKILLS = ("byu-kuali", "byu-workday")
+SKILLS = ("byu-learning-suite", "byu-kuali", "byu-workday")
 
 
 def money(value: str) -> int:

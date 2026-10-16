@@ -7,10 +7,10 @@ When the user works in VS Code, distinguish the Codex IDE sidebar from Codex CLI
 - Follow [CLI Browser Mode](cli-browser.md) for the dedicated Chrome session.
 - For prompt-driven interactive work, follow [Adaptive Browser Task Scripts](browser-task-scripts.md).
 
-Accept natural-language outcome prompts. For a request such as replacing one Kuali attachment:
+Accept natural-language outcome prompts. For a request such as changing one quiz date in Learning Suite or replacing one Kuali attachment:
 
-1. identify the visible proposal by number, title, principal investigator, sponsor, and origin;
-2. identify the exact attachment or field and its current value;
+1. identify the visible course by title, term, section, and origin, or the proposal by number, title, principal investigator, sponsor, and origin;
+2. identify the exact item, field, or attachment and its current value;
 3. present the current and proposed values and any related effects;
 4. obtain explicit confirmation immediately before the write;
 5. apply only the approved change through the authenticated browser-task runner;

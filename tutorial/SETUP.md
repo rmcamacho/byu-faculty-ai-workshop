@@ -38,17 +38,23 @@ node --version
 
 The major version must be at least 22. Python 3 is optional, for checking the numerical answers.
 
-## 3  Install the existing BYU browser plugin
+## 3  Install the workshop plugin
 
-This workshop reuses the August tutorial's **BYU Faculty Productivity** plugin; you do not install this workshop repository as a plugin. Exit the interactive Codex session before entering these terminal commands:
+This repository includes one Codex plugin, **BYU Learning Suite, Kuali and Workday** (`byu-faculty-integrations`). Its Learning Suite skill and browser helpers are the August ECEN tutorial's BYU Faculty Productivity plugin 0.3.0, unchanged; it adds `$byu-kuali` and a read-only `$byu-workday` for the [optional follow-on tutorials](../integrations/README.md). Exit the interactive Codex session, then run these commands in a terminal at the root of the downloaded folder (the one containing `README.md` and `plugins/`):
 
 ```text
-codex plugin marketplace add rmcamacho/byu-faculty-productivity --ref e77f6b0a8cfd2b3ba9eb1343e4ce1caf7a9d5957
-codex plugin add byu-faculty-productivity@byu-faculty-productivity
+codex plugin marketplace add .
+codex plugin add byu-faculty-integrations@faculty-ls-demo
 codex plugin list
 ```
 
-The pinned revision supplies version 0.3.0. If the marketplace is already installed, inspect `codex plugin list`; do not blindly remove an existing installation. If its version differs, use the original repository's update guide or ask the facilitator to check the installed revision. Do not assume a duplicate-marketplace notice updated the plugin.
+`codex plugin list` should show `byu-faculty-integrations@faculty-ls-demo` as installed and enabled. The `.` installs from your downloaded copy.
+
+**Already installed the August plugin?** It works for the Learning Suite exercises, but having both plugins enabled gives you two `$byu-learning-suite` skills. Either keep the August plugin and skip this step, or remove it before installing this one:
+
+```text
+codex plugin remove byu-faculty-productivity@byu-faculty-productivity
+```
 
 Start a **new** Codex session in this workshop folder after installing. Official plugin documentation also describes the interactive `/plugins` browser: https://learn.chatgpt.com/docs/plugins.
 
@@ -104,4 +110,4 @@ At the end, prompt:
 
 ## Validation status
 
-The public plugin was freshly cloned at the pinned revision and its nine helper tests passed on Linux with Node 24. Workshop calculations and a clean Git checkout are tested separately. These checks do not establish a clean Codex installation, Mac/Windows browser launch, another faculty member's LS copy, or their Google Slides access. Use [Participant pilot](PARTICIPANT_PILOT.md) before presenting this as a fully tested participant setup.
+The plugin's Learning Suite skill and browser helpers are byte-identical to the public BYU Faculty Productivity plugin at revision e77f6b0; its nine helper tests pass on Linux with Node 24, and installing it from a clean extraction of the workshop ZIP was tested with Codex CLI 0.153 on Linux. Workshop calculations and a clean Git checkout are tested separately. These checks do not establish a clean Codex installation, Mac/Windows browser launch, another faculty member's LS copy, or their Google Slides access. Use [Participant pilot](PARTICIPANT_PILOT.md) before presenting this as a fully tested participant setup.

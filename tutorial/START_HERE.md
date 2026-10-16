@@ -6,7 +6,7 @@ Practice three useful tasks: identify who needs help, improve a lesson from asse
 
 Download and unzip the workshop package. Start with the root README and manifest.json. Follow COPY_COURSE.md to create your own LS development course. Keep the package folder open in your AI coding assistant or attach the CSV files to your approved AI tool.
 
-For direct LS integration, follow [Connect Codex to Learning Suite](SETUP.md). It reuses the existing BYU Faculty Productivity plugin with a dedicated local Chrome profile. Sign in with your own authorized BYU account. For a data-only start, use the files directly; an ordinary chat with uploaded CSVs does not have LS access.
+For direct LS integration, follow [Connect Codex to Learning Suite](SETUP.md). It installs the workshop's Codex plugin (Learning Suite, Kuali and Workday) and uses a dedicated local Chrome profile. Sign in with your own authorized BYU account. For a data-only start, use the files directly; an ordinary chat with uploaded CSVs does not have LS access.
 
 First prompt:
 

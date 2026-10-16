@@ -1,6 +1,6 @@
 # CLI Browser Mode
 
-Use this mode when the user asks to work from Codex CLI, including Codex CLI in VS Code's integrated terminal. It provides browser lifecycle management, read-only structural probing, and adaptive task scripts for varied Kuali and Workday work.
+Use this mode when the user asks to work from Codex CLI, including Codex CLI in VS Code's integrated terminal. It provides browser lifecycle management, read-only structural probing, and adaptive task scripts for varied Learning Suite, Kuali, and Workday work.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ For a varied task that needs interaction, read [Adaptive Browser Task Scripts](b
 
 ## Shared Dedicated Profile
 
-These scripts use the same default dedicated profile and port as the BYU Faculty Productivity plugin used for Learning Suite. If that session is already running, reuse it; sign-ins for Learning Suite, Kuali, and Workday then share one dedicated window. Never start a competing session on another port merely to separate services.
+One dedicated profile and port serve Learning Suite, Kuali, and Workday, so the user signs into each service once in the same dedicated window. If a session is already running, reuse it. Never start a competing session on another port merely to separate services.
 
 ## Finish
 
