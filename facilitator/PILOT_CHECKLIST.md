@@ -7,7 +7,7 @@ Record OS, Node version, Codex version, plugin version and pass/fail observation
 1. Download the public ZIP without GitHub sign-in; extract and open the folder.
 2. Run `python3 scripts/check_answers.py` (Windows: `py -3 scripts/check_answers.py`) if Python is available; expect PASS.
 3. Follow tutorial/1_SETUP.md in a fresh Codex session; verify all three skills load.
-4. Record which path the participant chose (desktop app or CLI). Connect Chrome as tutorial/1_SETUP.md describes and sign in manually. For the desktop app, record whether the workshop marketplace appeared in Plugins without the CLI; for the CLI, whether Chrome opened on the intended computer.
+4. Record which path the participant chose (desktop app or CLI). Open the browser as tutorial/1_SETUP.md describes and sign in manually. For the desktop app, record whether Codex used the built-in browser without being told; for the CLI, whether Chrome opened on the intended computer.
 5. Copy Ryan's template into a new development course. Confirm all eight assessments, point totals, Start Here attachment and Lecture 10 access. Check dates separately because LS can remap them.
 6. Ask the assistant to read the assignment inventory without edits. Confirm it reports your copy's title and Development status.
 7. Run outreach analysis; expect DEMO-01/02/03/07 below 67%, DEMO-08 in D+ and the three exclusions treated correctly.

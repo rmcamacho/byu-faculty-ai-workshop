@@ -1,6 +1,6 @@
 {
   "name": "byu-faculty-integrations",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Portable Codex workflows for BYU Learning Suite course administration, Kuali proposal preparation, and read-only Workday finance and task review.",
   "author": {
     "name": "BYU Faculty Productivity Contributors"

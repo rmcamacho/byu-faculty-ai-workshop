@@ -1,14 +1,14 @@
 # 1. Set Up Codex and the Plugin
 
-Do this once. It prepares Learning Suite, Kuali and Workday together. You need your own BYU account, an institution-approved ChatGPT/Codex account and Google Chrome. Allow time for account approval before the workshop.
+Do this once. It prepares Learning Suite, Kuali and Workday together. You need your own BYU account and an institution-approved ChatGPT/Codex account. Allow time for account approval before the workshop.
 
 ## Choose How You'll Run Codex
 
 | | **ChatGPT desktop app** (recommended for most faculty) | **Codex CLI** (Terminal, PowerShell or VS Code) |
 | --- | --- | --- |
 | You type prompts in | the app's Codex chat | a terminal |
-| Browser it controls | your own Chrome, already signed in | a separate, dedicated Chrome window |
-| Also needs | the ChatGPT Chrome extension | Node.js 22 or newer |
+| Browser it controls | a browser built into the app | a separate, dedicated Chrome window |
+| Also needs | nothing else | Node.js 22 or newer and Google Chrome |
 
 Both use the same plugin, skills and prompts. Pick one; you can switch later.
 
@@ -28,16 +28,8 @@ Then follow **A** or **B**.
 
 ### Install the plugin
 
-1. Open **Plugins** in the app. Choose the **Faculty AI Workshop** marketplace and install **BYU Learning Suite, Kuali and Workday**.
+1. Open **Plugins** in the app. The **Faculty AI Workshop** marketplace appears because the workshop folder is open. Install **BYU Learning Suite, Kuali and Workday**.
 2. Quit and reopen the app, then start a **new** Codex chat in the workshop folder.
-
-If that marketplace isn't listed, install the [Codex CLI](https://learn.chatgpt.com/docs/codex/cli), open a terminal in the workshop folder, and run the two commands under [Install the plugin](#install-the-plugin-1) in B. Then quit and reopen the app; the app and the CLI share plugin settings.
-
-### Connect Chrome
-
-1. In **Plugins**, install or enable **Chrome**, and follow its prompt to add the ChatGPT extension to Google Chrome. (If your app shows it under **Settings > Computer use** instead, set it up there.)
-2. Quit and reopen both Chrome and the app.
-3. Codex works in your everyday Chrome, so close tabs with student records or other sensitive information before you ask it to look at a page.
 
 ### Check it
 
@@ -45,11 +37,15 @@ In a new Codex chat in the workshop folder:
 
 > Use $byu-learning-suite, $byu-kuali and $byu-workday. Without opening a browser, confirm all three skills loaded and summarize in one line each what they will and will not do. Stop if any is unavailable.
 
-Then:
+### Open the built-in browser
 
-> Use Chrome. List the titles of my open tabs, but do not navigate, click, type, or change anything.
+Codex works in a browser built into the app, not your everyday Chrome. If it tries to connect to an external Chrome instead, tell it to use the built-in browser.
 
-Continue with [2. Learning Suite](2_LEARNING_SUITE.md). You sign into BYU sites yourself in Chrome; never paste a password, Duo code or cookie into a prompt.
+> Open the app's built-in browser, not an external Chrome, and go to https://learningsuite.byu.edu. Then wait while I sign in. Do not click, type or change anything.
+
+Sign in yourself in that browser panel, including Duo. It keeps you signed in for the Learning Suite, Kuali and Workday tutorials. Never paste a password, Duo code or cookie into a prompt.
+
+Continue with [2. Learning Suite](2_LEARNING_SUITE.md).
 
 ## B. Codex CLI (Terminal, PowerShell or VS Code)
 
@@ -101,8 +97,9 @@ Continue with [2. Learning Suite](2_LEARNING_SUITE.md).
 ## Troubleshooting
 
 - **Skill unavailable:** start a **new** chat or session after installing; skills load only then. In the CLI, check `codex plugin list`. In VS Code, use the integrated terminal, not the Codex sidebar.
-- **Desktop app can't see Chrome:** confirm the Chrome plugin is enabled and the extension is installed in Chrome, restart both, and run the open-tabs test again.
+- **Workshop marketplace not in the desktop app's Plugins:** make sure the chat has the workshop folder open. Otherwise install the [Codex CLI](https://learn.chatgpt.com/docs/codex/cli), run the two commands under [Install the plugin](#install-the-plugin-1) in B, and reopen the app; the app and the CLI share plugin settings.
+- **Desktop app reaches for your external Chrome:** tell it to use the app's built-in browser instead.
 - **CLI Chrome opens on another machine:** you are in a remote terminal; use a local one.
 - **CLI port already in use:** ask Codex to check the dedicated-browser status and reuse the running session. Never attach it to an unrelated browser.
-- **CAPTCHA or BYU sign-in step:** complete it yourself in Chrome.
+- **CAPTCHA or BYU sign-in step:** complete it yourself in the browser Codex is using.
 - **No browser connection at all:** you can still do every exercise that uses local files. Say so in your prompt; uploading files to an ordinary chat is not Learning Suite access.

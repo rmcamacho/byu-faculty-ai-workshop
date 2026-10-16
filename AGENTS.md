@@ -14,6 +14,7 @@ Check everything and build the shareable ZIP with `python3 scripts/build_worksho
 and `node --test tests/cli_tools.test.mjs`; add any new shareable file to its
 allowlist and verify a clean extraction before distributing it.
 
-The plugin in plugins/byu-faculty-integrations keeps its Learning Suite skill and
-browser scripts identical to BYU Faculty Productivity 0.3.0. The Workday skill is
+The plugin in plugins/byu-faculty-integrations keeps its browser scripts identical
+to BYU Faculty Productivity 0.3.0; its Learning Suite skill differs only by the
+desktop-app built-in-browser line. The Workday skill is
 read-only: never add approval, submission or transaction steps.

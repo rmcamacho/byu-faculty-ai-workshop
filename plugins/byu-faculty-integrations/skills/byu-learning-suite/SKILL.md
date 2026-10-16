@@ -31,6 +31,7 @@ Help an instructor turn a current or prior Learning Suite course into a reviewed
 - For course copy and initial shell setup, read [references/course-setup.md](references/course-setup.md).
 - For schedules, assignments, syllabi, and course comparisons, read [references/course-planning.md](references/course-planning.md).
 - For any request involving rosters, grades, accommodations, individual exceptions, or student identifiers, read [references/student-data.md](references/student-data.md) before opening the relevant file or page.
+- In the ChatGPT desktop app, use the app's built-in browser and let the user sign in there; do not attach to an external Chrome unless the user asks.
 - When the user asks to work from Codex CLI, read [CLI Browser Mode](../../references/cli-browser.md). Use read-only probing for discovery and [Adaptive Browser Task Scripts](../../references/browser-task-scripts.md) for varied preview-confirm-apply-verify operations.
 - When the user asks to work from VS Code, read [VS Code Workflow](../../references/vscode-workflow.md) to distinguish the plugin-capable integrated terminal from the IDE sidebar.
 

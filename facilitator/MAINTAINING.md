@@ -14,14 +14,15 @@ node --test tests/cli_tools.test.mjs
 ## Provenance
 
 - **Learning Suite course:** the development course *Agentic AI Faculty Demo - Synthetic* contains copies of five homework sets, Unit Quizzes 1–3, the syllabus, Lectures and Extra Course Help from Ryan's Fall 2026 combined 240/301 course. Course and exam copying were enabled and verified on October 11, 2026. See the [BYU course-setup documentation](https://softwaresupport.byu.edu/learning-suite/instructor/setup-and-basics/course-setup) (Copy Course Information and Development Course).
-- **Plugin:** `plugins/byu-faculty-integrations`. Its Learning Suite skill and browser scripts are byte-identical to the ECEN tutorial's BYU Faculty Productivity plugin 0.3.0 (github.com/rmcamacho/byu-faculty-productivity, revision `e77f6b0`). The Kuali skill comes from the same plugin, renamed `byu-kuali` with two added rules. The Workday skill is new and read-only.
+- **Plugin:** `plugins/byu-faculty-integrations`. Its browser scripts are byte-identical, and its Learning Suite skill identical apart from one added line choosing the desktop app's built-in browser, to the ECEN tutorial's BYU Faculty Productivity plugin 0.3.0 (github.com/rmcamacho/byu-faculty-productivity, revision `e77f6b0`). The Kuali skill comes from the same plugin, renamed `byu-kuali` with two added rules. The Workday skill is new and read-only.
 - **Kuali exercise:** files `00`–`04` in `data/kuali/` and Part A of `answers/kuali.md` are adapted from the ECEN tutorial's grant-development exercise. Files `05`–`08` are new.
 - **Copyright:** course questions and slide decks are not in this repository. Do not redistribute them without permission.
 
 ## Validation Status
 
 - Tested: answer checkers; the nine browser-helper tests on Linux with Node 24; plugin installation from a clean ZIP extraction with Codex CLI 0.153 on Linux; the course copy settings on the owner account.
-- Not yet tested: the ChatGPT desktop app path (whether the repository marketplace appears in its Plugins Directory without the CLI, and Chrome control through its extension); a participant's Mac or Windows install and browser launch; a second faculty account copying the course end to end; that account's Google Slides access; the Kuali and Workday skills against live pages from a participant's machine. Use [PILOT_CHECKLIST.md](PILOT_CHECKLIST.md) before presenting the setup as fully tested.
+- Tested October 16, 2026 by the owner: the ChatGPT desktop app path. The repository marketplace appeared in Plugins with the workshop folder open, without the CLI, and the workflow ran in the app's built-in browser (Codex first tried an external Chrome until told otherwise).
+- Not yet tested: a participant's Mac or Windows install and browser launch; a second faculty account copying the course end to end; that account's Google Slides access; the Kuali and Workday skills against live pages from a participant's machine. Use [PILOT_CHECKLIST.md](PILOT_CHECKLIST.md) before presenting the setup as fully tested.
 
 ## Traffic History
 

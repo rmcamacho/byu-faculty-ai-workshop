@@ -6,7 +6,7 @@ Practice three tasks on a real copied course with fictional students: find who n
 
 The source is **Agentic AI Faculty Demo - Synthetic** (Ryan Camacho, Fall 2026, EC EN 240). Course and exam copying are enabled.
 
-1. Sign into Learning Suite in the Chrome window Codex uses (your own Chrome in the desktop app, or the dedicated window in the CLI). On Course List, choose **Development > New Development Course**.
+1. Sign into Learning Suite in the browser Codex uses (the app's built-in browser, or the dedicated Chrome window in the CLI). On Course List, choose **Development > New Development Course**.
 2. Name it something distinctive, such as *Faculty AI Practice*. Choose Fall 2026 and **Total Points**. For the teaching area, course number and meeting day, you can use your own department/course and a suitable day; **EC EN 240 and Friday are example settings**, not tutorial requirements. Finish setup.
 3. In the new course, open **Home > Setup > Copy From**. Choose another instructor's course, then Ryan Camacho, the development-course/semester option and the source title. The dropdown sequence may vary.
 4. Choose **Add to my current course materials and information**. Select the syllabus, grade scale, Content (including Start Here) and all eight assessments.

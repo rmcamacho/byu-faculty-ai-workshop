@@ -29,6 +29,8 @@ Keep proposal content, budgets, upload files, and the live Kuali record synchron
 
 For any live Kuali work, read [references/kuali-live-updates.md](references/kuali-live-updates.md). Obtain explicit confirmation immediately before changing a live record, replacing an attachment, certifying, routing, or submitting.
 
+In the ChatGPT desktop app, use the app's built-in browser and let the user sign in there; do not attach to an external Chrome unless the user asks.
+
 When the user asks to work from Codex CLI, read [CLI Browser Mode](../../references/cli-browser.md). Use read-only probing for discovery and [Adaptive Browser Task Scripts](../../references/browser-task-scripts.md) for varied preview-confirm-apply-verify operations. Existing restrictions on certification, routing, approval, and submission still apply.
 
 When the user asks to work from VS Code, read [VS Code Workflow](../../references/vscode-workflow.md). Run plugin workflows through Codex CLI in VS Code's integrated terminal; do not assume the IDE sidebar loaded this plugin.

@@ -6,7 +6,7 @@ This portable Codex plugin provides three workflows that share one browser conne
 - **BYU Kuali (`$byu-kuali`):** organize proposal development, keep narrative, budget, and attachments synchronized, and carefully update a Kuali record with preview, confirmation, and verification.
 - **BYU Workday (`$byu-workday`):** read research-finance reports and inbox tasks and explain them. It is read-only: it never approves, sends back, submits, certifies, or creates transactions.
 
-The Learning Suite skill and the browser scripts are unchanged from the ECEN faculty tutorial's BYU Faculty Productivity plugin (version 0.3.0, revision `e77f6b0`). The Kuali skill comes from the same plugin with two added rules. The Workday skill is new and follows the same pattern with stricter read-only limits.
+The browser scripts are unchanged, and the Learning Suite skill unchanged apart from one line choosing the desktop app's built-in browser, from the ECEN faculty tutorial's BYU Faculty Productivity plugin (version 0.3.0, revision `e77f6b0`). The Kuali skill comes from the same plugin with two added rules. The Workday skill is new and follows the same pattern with stricter read-only limits.
 
 The plugin contains no course IDs, student records, proposal content, account numbers, balances, employee records, passwords, cookies, or browser profiles. Each faculty member supplies their own authenticated browser session. BYU work should use the CES ChatGPT Edu identity and follow the current BYU ChatGPT Edu Data Guidelines; identifiable student data must be de-identified unless explicitly approved by the institutional AI Executive Committee.
 
@@ -26,7 +26,7 @@ Grading judgments and student messaging in Learning Suite, certification, routin
 
 ## Requirements
 
-- The ChatGPT desktop app with its Chrome plugin and extension, which controls the user's own signed-in Chrome; or
+- The ChatGPT desktop app, using its built-in browser (the user signs in there); or
 - Codex CLI (including in VS Code's integrated terminal) with Node.js 22 or newer and Google Chrome, which uses a dedicated Chrome profile and the guarded task runner in `scripts/`. The Codex IDE sidebar does not currently load plugins.
 - Your own access to the relevant course, proposal, or Workday reports.
 

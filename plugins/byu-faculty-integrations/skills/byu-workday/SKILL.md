@@ -11,7 +11,7 @@ Help a faculty member understand their own Workday finance reports and task inbo
 
 1. Use the BYU CES ChatGPT Edu identity for BYU work, not a personal ChatGPT account.
 2. Workday pages can contain other people's personal and financial information: student and employee names, expense details, payroll, and HR records. Follow the current BYU ChatGPT Edu Data Guidelines. Do not open or read a task, report, or worker profile containing restricted data or identifiable student data unless the user confirms it is permitted. De-identify people in summaries whenever possible.
-3. The user signs in through BYU's Workday entry page (https://workday.byu.edu/) in the browser Codex controls (the user's own Chrome in the ChatGPT desktop app, or the dedicated CLI browser) and navigates to a safe starting page. Never request or store passwords, Duo codes, cookies, or browser-profile data. If Workday shows a sign-in, Duo, or "remember this device" step, the user completes it.
+3. The user signs in through BYU's Workday entry page (https://workday.byu.edu/) in the browser Codex controls (the ChatGPT desktop app's built-in browser, or the dedicated CLI browser) and navigates to a safe starting page. Never request or store passwords, Duo codes, cookies, or browser-profile data. If Workday shows a sign-in, Duo, or "remember this device" step, the user completes it.
 4. Confirm the visible tenant (the BYU Workday tenant on myworkday.com) and that the signed-in name matches the user before reading anything.
 
 ## Read Workflows
@@ -19,6 +19,8 @@ Help a faculty member understand their own Workday finance reports and task inbo
 For balances and spending questions, read [references/finance-reports.md](references/finance-reports.md). For inbox tasks, read [references/inbox-tasks.md](references/inbox-tasks.md).
 
 Use Workday's own search to discover exact current report and task names rather than guessing them. Report the name, period, filters, and columns exactly as displayed.
+
+In the ChatGPT desktop app, use the app's built-in browser and let the user sign in there; do not attach to an external Chrome unless the user asks.
 
 When the user asks to work from Codex CLI, read [CLI Browser Mode](../../references/cli-browser.md). Use read-only probing for discovery and [Adaptive Browser Task Scripts](../../references/browser-task-scripts.md) in preview mode to read rendered content. In Workday, the only permitted `--apply` run is running a read-only report after the user has confirmed its exact parameters; see the finance reference.
 
