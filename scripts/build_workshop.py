@@ -19,6 +19,7 @@ ZIP_TIMESTAMP = (2026, 10, 16, 10, 0, 0)
 WORKSHOP_FILES = (
     ".agents/plugins/marketplace.json",
     "README.md",
+    "AGENTS.md",
     "answers/kuali.md",
     "answers/ls-1-outreach.md",
     "answers/ls-2-teaching.md",

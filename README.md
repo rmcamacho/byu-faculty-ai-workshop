@@ -13,7 +13,7 @@ Repository: https://github.com/rmcamacho/byu-faculty-ai-workshop
 | 3 | [Kuali](tutorial/3_KUALI.md): funding search and keeping a proposal in sync *(optional)* | 25 min | Nothing beyond step 1 |
 | 4 | [Workday](tutorial/4_WORKDAY.md): research balances and inbox triage *(optional)* | 15 min | Nothing beyond step 1 |
 
-Step 1 installs one Codex plugin with all three skills: `$byu-learning-suite`, `$byu-kuali` and `$byu-workday`. Every exercise runs from a single Codex session in this folder. Worked answers are in [answers/](answers/); try each prompt before opening them.
+Step 1 installs one Codex plugin with all three skills: `$byu-learning-suite`, `$byu-kuali` and `$byu-workday`. Every exercise runs from a single Codex session in this folder. Worked answers are in [answers/](answers/); try each prompt before opening them. You can tell Codex "Start Learning Suite Exercise 1"; it will read the tutorial and guide you through each checkpoint. Your reports go in `local/` (for example, `local/exercise-1/report.md`), separate from the supplied answers.
 
 ## Everything Here Is Synthetic
 

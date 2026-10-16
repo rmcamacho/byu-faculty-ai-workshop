@@ -33,6 +33,8 @@ DEMO-02 shows the branch-voltage and boundary patterns but answers the polarity 
 
 ## Draft messages
 
+Checkpoint 3 requests two missing-work messages (DEMO-01 and DEMO-07) and two diagnostic coaching messages (DEMO-02 and DEMO-03). Only the coaching messages cite diagnostic answers; the missing-work messages build on scored strengths and ask the student to check the record. Save participant drafts to `local/exercise-1/messages.md`, separate from this worked answer.
+
 **DEMO-01 — Build on what is working**
 
 Hi Demo Student 01,
@@ -45,7 +47,7 @@ RMC
 
 Hi Demo Student 02,
 
-You've kept up with all eight submissions, and your polarity-check equation was correct. On the separate resistor check, you wrote `I = 8/1 = 8 mA`. That suggests we should check which voltage belongs across the resistor. Its ends are at 8 V and 3 V, so the voltage across it is their difference: 5 V. Let's label both ends of one resistor in Homework 3.3 Q1–Q2 together before writing its current expression. Bring whatever work you have; we can start there.
+You've kept up with all eight submissions, and your polarity-check equation was correct. On the separate resistor check, you wrote `I = 8/1 = 8 mA`. Your answer suggests we should check which voltage belongs across the resistor. Its ends are at 8 V and 3 V, so the voltage across it is their difference: 5 V. Let's label both ends of one resistor in Homework 3.3 Q1–Q2 together before writing its current expression. Bring whatever work you have; we can start there.
 
 RMC
 
@@ -53,7 +55,7 @@ RMC
 
 Hi Demo Student 03,
 
-Your Thevenin-equivalence parts in Unit Quiz 3 were successful. On the separate polarity check, your `-2 V` answer came from `Vn - Vp = 4 V`. That suggests the source constraint is a useful next step to check together. The positive terminal is at p, so p is 4 V higher than n: `Vp - Vn = 4 V`, giving 6 V. Try marking the higher-potential terminal first, then let's revisit one source constraint in Homework 3.3's supernode block Q8–Q10. We can take it one equation at a time.
+Your Thevenin-equivalence parts in Unit Quiz 3 were successful. On the separate polarity check, your `-2 V` answer came from `Vn - Vp = 4 V`. Your answer suggests we should check the source constraint together. The positive terminal is at p, so p is 4 V higher than n: `Vp - Vn = 4 V`, giving 6 V. Try marking the higher-potential terminal first, then let's revisit one source constraint in Homework 3.3's supernode block Q8–Q10. We can take it one equation at a time.
 
 RMC
 

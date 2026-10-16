@@ -41,11 +41,11 @@ In a new Codex chat in the workshop folder:
 
 Codex works in a browser built into the app, not your everyday Chrome. If it tries to connect to an external Chrome instead, tell it to use the built-in browser.
 
-> Open the app's built-in browser, not an external Chrome, and go to https://learningsuite.byu.edu. Then wait while I sign in. Do not click, type or change anything.
+> Use $byu-learning-suite. Open or reuse the app's built-in browser and go to https://learningsuite.byu.edu. Wait while I sign in and tell you I am ready. Then open the Development course list and identify my practice copy by its visible title; ask me which one only if there are multiple plausible copies. Do not open the source demo or a live course, roster or gradebook. If I have no copy yet, guide me through Copy the Demo Course in tutorial/2_LEARNING_SUITE.md. Once my copy is open, confirm its title and Development status, check the eight assignment titles and point values (283 total), and locate Start Here without changing anything.
 
-Sign in yourself in that browser panel, including Duo. It keeps you signed in for the Learning Suite, Kuali and Workday tutorials. Never paste a password, Duo code or cookie into a prompt.
+Sign in yourself in that browser panel, including Duo. Reuse this browser for later exercises; another service may require sign-in. Never paste a password, Duo code or cookie into a prompt.
 
-Continue with [2. Learning Suite](2_LEARNING_SUITE.md).
+Continue with [2. Learning Suite](2_LEARNING_SUITE.md). If your copy is already verified, start Exercise 1; otherwise follow Copy the Demo Course.
 
 ## B. Codex CLI (Terminal, PowerShell or VS Code)
 
