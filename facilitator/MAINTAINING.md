@@ -22,3 +22,25 @@ node --test tests/cli_tools.test.mjs
 
 - Tested: answer checkers; the nine browser-helper tests on Linux with Node 24; plugin installation from a clean ZIP extraction with Codex CLI 0.153 on Linux; the course copy settings on the owner account.
 - Not yet tested: a participant's Mac or Windows install and browser launch; a second faculty account copying the course end to end; that account's Google Slides access; the Kuali and Workday skills against live pages from a participant's machine. Use [PILOT_CHECKLIST.md](PILOT_CHECKLIST.md) before presenting the setup as fully tested.
+
+## Traffic History
+
+GitHub keeps only 14 days of clone and view counts. The **Record traffic** workflow (`.github/workflows/traffic.yml`) runs `scripts/record_traffic.py` daily and commits the results to the `traffic-data` branch, so the history outlives that window:
+
+- `traffic/clones.csv` and `traffic/views.csv`: one row per day (`count` = total, `uniques` = distinct visitors). The newest fetch of a day wins, because the current day is partial.
+- `traffic/referrers.csv` and `traffic/paths.csv`: dated snapshots of GitHub's 14-day top referring sites and most-viewed pages.
+- `traffic/repository.csv`: daily stars, forks and watchers.
+
+Read it on GitHub (switch the branch selector to `traffic-data`) or locally with `git fetch origin traffic-data` and `git show origin/traffic-data:traffic/views.csv`. The branch is public like the rest of the repository; it holds only aggregate counts and referring sites.
+
+**Limits.** "Download ZIP" clicks are not counted anywhere by GitHub. Clones include automated and maintainer clones. Days before the workflow's first run are recoverable only while they are still inside GitHub's 14-day window.
+
+**One-time setup.** The workflow's built-in token cannot read traffic, so it uses a fine-grained personal access token:
+
+1. On GitHub: **Settings > Developer settings > Personal access tokens > Fine-grained tokens > Generate new token**.
+2. Name it (for example *byu-faculty-ai-workshop traffic*) and choose an expiration. Under **Repository access**, choose **Only select repositories** and pick `byu-faculty-ai-workshop`.
+3. Under **Permissions > Repository permissions**, set **Administration** to **Read-only**. Nothing else is needed.
+4. Generate the token and store it as the repository secret `TRAFFIC_TOKEN`, either under **Repository Settings > Secrets and variables > Actions > New repository secret**, or with `gh secret set TRAFFIC_TOKEN -R rmcamacho/byu-faculty-ai-workshop` (it prompts for the value, so the token never lands in a file or your shell history).
+5. Open **Actions > Record traffic > Run workflow** once to confirm it works and to capture the current 14 days.
+
+**Upkeep.** When the token expires, the daily run fails and GitHub emails you; create a new token and replace the secret. GitHub also disables scheduled workflows in public repositories after 60 days without repository activity, with an email warning first; re-enable it from the Actions tab.

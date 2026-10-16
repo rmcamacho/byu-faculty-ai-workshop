@@ -1,0 +1,48 @@
+name: Record traffic
+
+# GitHub keeps only 14 days of traffic. This saves it daily to the traffic-data
+# branch so the history outlives that window. See facilitator/MAINTAINING.md.
+
+on:
+  schedule:
+    - cron: "17 7 * * *" # daily, 1:17 a.m. Mountain standard time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: record-traffic
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check out the traffic-data branch
+        run: |
+          if git fetch origin +refs/heads/traffic-data:refs/remotes/origin/traffic-data; then
+            git worktree add -B traffic-data traffic-data origin/traffic-data
+          else
+            git worktree add --detach traffic-data
+            git -C traffic-data switch --orphan traffic-data
+          fi
+
+      - name: Fetch traffic
+        env:
+          TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+        run: python3 scripts/record_traffic.py --repo "$GITHUB_REPOSITORY" --out traffic-data/traffic
+
+      - name: Commit any changes
+        working-directory: traffic-data
+        run: |
+          git add traffic
+          if git diff --cached --quiet; then
+            echo "No change since the last run."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898499+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Record traffic $(date -u +%F)"
+          git push origin traffic-data
