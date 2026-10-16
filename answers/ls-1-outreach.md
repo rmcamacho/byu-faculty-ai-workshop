@@ -1,8 +1,6 @@
-# Example 1  Help students take the next step
+# Learning Suite Exercise 1: Worked Answer
 
-## Prompt
-
-> Read manifest.json, students.csv, assignments.csv, assessment_results.csv and demo_ta_hours.csv. At the stated snapshot, calculate each fictional student's grade using total points and no drops. Count overdue missing work as zero; exclude excused, not-yet-due extensions and submitted-but-ungraded work from numerator and denominator. Identify grades below 67%, show D+ separately, and flag incomplete evidence. Use question_results.csv joined with question_map.csv to identify specific missed parts where available. Open the corresponding assignments in my LS development copy to verify their titles and instructions. Do not invent question-level evidence for the other six assessments. Draft four short supportive messages, signed RMC, without sending them. Distinguish missing work from low scored work, and use fictional TA hours only for relevant topics.
+Prompt: [tutorial/2_LEARNING_SUITE.md](../tutorial/2_LEARNING_SUITE.md).
 
 ## Worked answer
 

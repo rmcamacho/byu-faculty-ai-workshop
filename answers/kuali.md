@@ -1,6 +1,6 @@
-# Kuali Tutorial: Worked Answers
+# Kuali: Worked Answers
 
-Open this after attempting the prompts. Open-ended concept answers can legitimately differ; the planted findings should not.
+Open this after attempting the prompts in [tutorial/3_KUALI.md](../tutorial/3_KUALI.md). Open-ended concept answers can legitimately differ; the planted findings should not.
 
 ## Part A
 

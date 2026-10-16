@@ -4,8 +4,7 @@ __pycache__/
 .env
 .env.*
 *.zip
-course-start-here*.html
-workshop-addition.html
+dist/
 browser_tasks/
 local/
 outputs/

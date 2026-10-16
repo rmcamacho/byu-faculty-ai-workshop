@@ -11,55 +11,46 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ARCHIVE = ROOT / "faculty-ls-workshop-v2.zip"
+ARCHIVE = ROOT / "dist" / "faculty-ai-workshop.zip"
 ZIP_TIMESTAMP = (2026, 10, 16, 10, 0, 0)
 
 # Keep this list explicit so local browser state, credentials, and intermediate
 # presentation files cannot enter the shareable archive accidentally.
 WORKSHOP_FILES = (
+    ".agents/plugins/marketplace.json",
     "README.md",
-    "manifest.json",
-    "build_demo.py",
+    "answers/kuali.md",
+    "answers/ls-1-outreach.md",
+    "answers/ls-2-teaching.md",
+    "answers/ls-3-administration.md",
+    "answers/ls-4-ta-follow-up.md",
+    "answers/workday.md",
     "data/approved_demo_changes.csv",
     "data/assessment_results.csv",
     "data/assignments.csv",
     "data/demo_ta_hours.csv",
     "data/expected_concept_summary.csv",
     "data/expected_student_summary.csv",
+    "data/kuali/00_research_profile_intake.md",
+    "data/kuali/00_synthetic_faculty_direction.md",
+    "data/kuali/01_synthetic_constraints.md",
+    "data/kuali/02_dated_backup_nsf_eccs_2026-08-26.md",
+    "data/kuali/03_deliberately_flawed_shortlist.md",
+    "data/kuali/04_concept_note_template.md",
+    "data/kuali/05_proposal_state.md",
+    "data/kuali/06_budget_workbook_summary.csv",
+    "data/kuali/07_budget_justification_excerpt.md",
+    "data/kuali/08_kuali_record_snapshot.md",
     "data/question_map.csv",
     "data/question_results.csv",
     "data/students.csv",
-    "examples/01_OUTREACH.md",
-    "examples/02_TEACHING.md",
-    "examples/03_ADMINISTRATION.md",
-    "examples/04_ASSISTANT_BONUS.md",
-    "scripts/build_workshop.py",
-    "scripts/check_answers.py",
-    "tutorial/COPY_COURSE.md",
-    "tutorial/PARTICIPANT_PILOT.md",
-    "tutorial/PRESENTER_RUN_OF_SHOW.md",
-    "tutorial/SETUP.md",
-    "tutorial/START_HERE.md",
-    ".agents/plugins/marketplace.json",
-    "integrations/README.md",
-    "integrations/SETUP.md",
-    "integrations/kuali/ANSWERS.md",
-    "integrations/kuali/TUTORIAL.md",
-    "integrations/kuali/workspace/00_research_profile_intake.md",
-    "integrations/kuali/workspace/00_synthetic_faculty_direction.md",
-    "integrations/kuali/workspace/01_synthetic_constraints.md",
-    "integrations/kuali/workspace/02_dated_backup_nsf_eccs_2026-08-26.md",
-    "integrations/kuali/workspace/03_deliberately_flawed_shortlist.md",
-    "integrations/kuali/workspace/04_concept_note_template.md",
-    "integrations/kuali/workspace/05_proposal_state.md",
-    "integrations/kuali/workspace/06_budget_workbook_summary.csv",
-    "integrations/kuali/workspace/07_budget_justification_excerpt.md",
-    "integrations/kuali/workspace/08_kuali_record_snapshot.md",
-    "integrations/workday/ANSWERS.md",
-    "integrations/workday/TUTORIAL.md",
-    "integrations/workday/workspace/01_finance_overview.csv",
-    "integrations/workday/workspace/01_finance_overview_README.md",
-    "integrations/workday/workspace/02_inbox_snapshot.md",
+    "data/workday/01_finance_overview.csv",
+    "data/workday/01_finance_overview_README.md",
+    "data/workday/02_inbox_snapshot.md",
+    "facilitator/MAINTAINING.md",
+    "facilitator/PILOT_CHECKLIST.md",
+    "facilitator/RUN_OF_SHOW.md",
+    "manifest.json",
     "plugins/byu-faculty-integrations/.codex-plugin/plugin.json",
     "plugins/byu-faculty-integrations/README.md",
     "plugins/byu-faculty-integrations/references/browser-task-scripts.md",
@@ -81,8 +72,15 @@ WORKSHOP_FILES = (
     "plugins/byu-faculty-integrations/skills/byu-workday/agents/openai.yaml",
     "plugins/byu-faculty-integrations/skills/byu-workday/references/finance-reports.md",
     "plugins/byu-faculty-integrations/skills/byu-workday/references/inbox-tasks.md",
+    "scripts/build_demo.py",
+    "scripts/build_workshop.py",
+    "scripts/check_answers.py",
     "scripts/check_integrations.py",
     "tests/cli_tools.test.mjs",
+    "tutorial/1_SETUP.md",
+    "tutorial/2_LEARNING_SUITE.md",
+    "tutorial/3_KUALI.md",
+    "tutorial/4_WORKDAY.md",
 )
 
 
@@ -106,6 +104,7 @@ def main() -> None:
     for check in ("scripts/check_answers.py", "scripts/check_integrations.py"):
         subprocess.run([sys.executable, str(ROOT / check)], cwd=ROOT, check=True)
 
+    ARCHIVE.parent.mkdir(exist_ok=True)
     with ZipFile(ARCHIVE, "w", compression=ZIP_DEFLATED, compresslevel=9) as archive:
         for relative_path in WORKSHOP_FILES:
             contents = (ROOT / relative_path).read_bytes()

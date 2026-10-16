@@ -10,9 +10,7 @@ The Learning Suite skill and the browser scripts are unchanged from the ECEN fac
 
 The plugin contains no course IDs, student records, proposal content, account numbers, balances, employee records, passwords, cookies, or browser profiles. Each faculty member supplies their own authenticated browser session. BYU work should use the CES ChatGPT Edu identity and follow the current BYU ChatGPT Edu Data Guidelines; identifiable student data must be de-identified unless explicitly approved by the institutional AI Executive Committee.
 
-## Relationship to the August Plugin
-
-This plugin replaces BYU Faculty Productivity 0.3.0 for the workshop. Do not enable both, or Codex will see two `$byu-learning-suite` skills. The Kuali skill is named `byu-kuali` here, not `byu-kuali-proposals`. Both plugins use the same dedicated Chrome profile location and port.
+Install it with [tutorial/1_SETUP.md](../../tutorial/1_SETUP.md). It supersedes BYU Faculty Productivity 0.3.0, so don't enable both plugins at once.
 
 ## Safety Pattern
 

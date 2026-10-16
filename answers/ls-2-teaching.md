@@ -1,8 +1,6 @@
-# Example 2  Improve teaching from assessment evidence
+# Learning Suite Exercise 2: Worked Answer
 
-## Prompt
-
-> Join question_results.csv and question_map.csv on assignment_id + item. For graded submissions only, report points earned/possible, student count and item count for each concept in each assessment. Report missing/excluded submissions separately. Compare HW3.3 Q1–Q7 with UQ3 Part9 for node voltage; treat HW3.3 Q8–Q11 as supernodes. Read Lecture 10 through my copied LS Lectures page. Propose an improvement tied to an actual slide, a checked worked example, a misconception question and a brief activity. Do not edit the source deck. Separate observed outcomes from hypotheses about why students struggled.
+Prompt: [tutorial/2_LEARNING_SUITE.md](../tutorial/2_LEARNING_SUITE.md).
 
 ## Evidence and interpretation
 

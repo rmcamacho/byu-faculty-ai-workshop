@@ -1,8 +1,6 @@
-# Example 3  Make a precise course change
+# Learning Suite Exercise 3: Worked Answer
 
-## Prompt
-
-> Confirm that the open course is my Development copy. Read its syllabus AI policy and the instructions for Unit Quizzes 1–3. Show exact discrepancies if any; report no change needed when they agree. Then prepare a before/after preview for moving Homework 3.3's course-wide due date to October 23, 2026 at 11:59 p.m. America/Denver. Read its current date rather than assuming the template's October 2 date survived copying. Preserve opening dates, points, questions, time limits, attempts and publication status. Do not save until I approve the exact target and change. After approval, save once, reopen and verify; inspect first after uncertainty, never repeat blindly.
+Prompt: [tutorial/2_LEARNING_SUITE.md](../tutorial/2_LEARNING_SUITE.md).
 
 ## Policy comparison
 

@@ -1,65 +1,32 @@
-# Agentic AI for Faculty with Learning Suite
+# Agentic AI for Faculty: Learning Suite, Kuali and Workday
 
-A self-guided companion to the October 16, 2026 faculty lunch and learn. Start with [the workshop guide](tutorial/START_HERE.md), [connect Codex to LS](tutorial/SETUP.md), and [copy the development course](tutorial/COPY_COURSE.md). For presenting, use the [20-minute run of show](tutorial/PRESENTER_RUN_OF_SHOW.md).
+A self-guided companion to the October 16, 2026 faculty lunch and learn. You will connect Codex to BYU systems and practice one safe workflow on realistic tasks: **inspect, preview, confirm, apply, verify**.
 
 Repository: https://github.com/rmcamacho/faculty-ls-demo
 
-## Synthetic student support
+## The Path
 
-All students, results, TA hours, approvals and contact details in this package are fictional. They are NOT anonymized or derived from any real student. The example.invalid addresses cannot deliver mail.
+| Step | Guide | Time | Needs |
+| --- | --- | --- | --- |
+| 1 | [Set up Codex and the plugin](tutorial/1_SETUP.md) | 15 min, once | Codex, Node.js, Chrome |
+| 2 | [Learning Suite](tutorial/2_LEARNING_SUITE.md): student outreach, teaching improvement, course changes | 30 min | Your own LS development copy |
+| 3 | [Kuali](tutorial/3_KUALI.md): funding search and keeping a proposal in sync *(optional)* | 25 min | Nothing beyond step 1 |
+| 4 | [Workday](tutorial/4_WORKDAY.md): research balances and inbox triage *(optional)* | 15 min | Nothing beyond step 1 |
 
-## What is live
+Step 1 installs one Codex plugin with all three skills: `$byu-learning-suite`, `$byu-kuali` and `$byu-workday`. Every exercise runs from a single Codex session in this folder. Worked answers are in [answers/](answers/); try each prompt before opening them.
 
-The development course **Agentic AI Faculty Demo - Synthetic** contains five homework sets (1.1, 1.2, 2.4, 3.1 and 3.3), Unit Quizzes 1–3, the source syllabus, Lectures and Extra Course Help copied from Ryan's Fall 2026 combined 240/301 course. Copies are separate LS materials. Google Slides links still refer to original decks; propose revisions without editing those decks.
+## Everything Here Is Synthetic
 
-BYU documents that development courses do not have enrolled students or a working student gradebook. These files supply the fictional student results. They are course-content attachments, not native gradebook records, and must not be imported into a live course.
+All students, results, TA hours, approvals, proposals, worktags, amounts, people and tasks are invented. They are not anonymized or derived from real records, and the `example.invalid` addresses cannot deliver mail. The Learning Suite teaching materials are real copies of course content, which stay in Learning Suite and Google Slides and are not included here.
 
-## Start here
+Nothing in this repository authorizes a change to a live course, proposal or Workday record. Certification, routing and submission in Kuali, and every approval in Workday, stay with you.
 
-1. Read manifest.json for provenance, grading rules and limitations.
-2. Read data/students.csv, assignments.csv and assessment_results.csv.
-3. For problem-level analysis, join question_results.csv to question_map.csv on assignment_id + item, and join students on student_id. Problem-level data exists only for Homework 3.3 and Unit Quiz 3.
-4. Open the matching copied LS assignment and lecture links to inspect the real instructional material.
-5. Compare your calculations with expected_student_summary.csv and expected_concept_summary.csv only after completing the exercise.
+## What's in the Folder
 
-Snapshot: October 16, 2026 at 10 a.m. Mountain. All dates have an explicit offset. DEMO identifiers are local fictional identifiers, not BYU NetIDs.
-
-## Grading rules for this demonstration
-
-Use total points over this eight-assessment subset, with no dropped scores. Full possible total is 283. This is intentionally NOT the weighted grading policy in the source course syllabus. Do not call this a student's actual course grade.
-
-Missing overdue work counts as zero. Excused, extension_not_due and submitted_ungraded work is excluded from both numerator and denominator. Flag pending grading as incomplete evidence. A scored zero is different from a missing submission. Unit Quiz 3 has 15 raw question points scaled to 100 gradebook points; Homework 3.3 is 11 unscaled points.
-
-The copied grade scale has D+ at 67%, D at 63%, D- at 60%, and E below 60%. Interpret “D or below” as below 67% for this demo; list D+ students separately. If the university's actual outreach rule differs, confirm it before using the exercise on real records.
-
-## Exercise 1: timely and specific outreach
-
-Prompt: “Using this fictional dataset and its stated grading rules, identify students currently at D or below. Show the denominator, missing work, excluded work and evidence gaps. Distinguish incomplete work from demonstrated concept difficulty. Draft brief encouraging messages with specific assignments or question parts to review online. Use the fictional TA schedule only when relevant. Do not send anything. Sign student drafts RMC.”
-
-Use DEMO-01 for missing-work discussion, DEMO-02 for broad difficulty, DEMO-03 for node-voltage difficulty, DEMO-09 for an improving trend. DEMO-04 has submitted work awaiting grading; DEMO-05 has a future approved deadline; DEMO-06 has an excused assignment. Never infer motivation, health, disability or life circumstances from scores.
-
-## Exercise 2: improve teaching
-
-Prompt: “Find recurring concept difficulties among graded submissions, keeping missing work separate. Compare HW3.3 with UQ3, cite exact mapped question/part labels, and show denominators. Open Lecture 10 via the copied LS Lectures page. Recommend a worked example, a misconception check and a short in-class activity based on what the slides actually contain. Treat scores as evidence to investigate, not proof of a teaching failure. Do not change the original slides.”
-
-The dataset deliberately includes a node-voltage/supernode pattern. Aggregate scores for other assignments do not establish which questions were missed. The question map includes structure and maxima, not copyrighted question text, diagrams or answer keys.
-
-## Exercise 3: administrative help
-
-Prompt: “Compare copied assignment instructions with the syllabus AI policy and propose exact changes only if a discrepancy exists. Preview a course-wide deadline change in this development course. For approved_demo_changes.csv, prepare a per-student change preview but do not claim it was applied in LS: those fictional students are not enrolled.”
-
-Any live demo edit should target this development course explicitly and be verified afterward. The synthetic approval file is exercise data, not authority to change a real student's record. Native accommodations cannot be demonstrated as completed without supported test enrollments.
-
-## Beyond Learning Suite: Kuali and Workday
-
-The repository also includes optional integrations for two more BYU systems, each with its own tutorial and synthetic exercises: [Kuali proposals](integrations/kuali/TUTORIAL.md) (funding search, proposal workspaces and record sync) and [Workday](integrations/workday/TUTORIAL.md) (read-only finance reports and inbox triage). One Codex plugin in this repository, `byu-faculty-integrations`, covers Learning Suite, Kuali and Workday, so the setup guide installs everything at once; see [integrations/README.md](integrations/README.md). The Kuali skill, funding exercise and browser scripts are borrowed from the ECEN faculty AI tutorial. The Workday skill never approves, submits or creates transactions.
-
-## Rebuild and checks
-
-Run `python3 build_demo.py` (Python standard library only). It deterministically regenerates 24 students, 192 assessment records, 552 question-part records, expected summaries and the synthetic-data ZIP. Assertions check joins, point ranges, scaling, excluded-work denominators and non-deliverable addresses. It never connects to LS.
-
-Run `python3 scripts/check_integrations.py` to check the Kuali and Workday arithmetic, skills and links, and `node --test tests/cli_tools.test.mjs` for the plugin's browser helpers.
-
-Run `python3 scripts/build_workshop.py` to check the answers and create the complete shareable `faculty-ls-workshop-v2.zip` from an explicit allowlist. The archive includes the examples, setup, copy, presenter and participant-pilot guides, and the Kuali and Workday integrations; it excludes local browser state and intermediate presentation files.
-
-Continue with tutorial/START_HERE.md and tutorial/COPY_COURSE.md. Detailed prompts, worked answers and a 20-minute presenter script are included. Run python3 scripts/check_answers.py to independently verify the calculations. The CLI setup guide installs the repository's plugin, whose Learning Suite skill is unchanged from the August ECEN plugin; a participant-machine installation and second-faculty copy dry run remain to be tested. See tutorial/PARTICIPANT_PILOT.md.
+| Folder | Contents |
+| --- | --- |
+| [tutorial/](tutorial/) | The four guides above |
+| [data/](data/) | Exercise inputs: Learning Suite CSVs and [manifest.json](manifest.json), plus [kuali/](data/kuali/) and [workday/](data/workday/) |
+| [answers/](answers/) | Worked answers for every exercise |
+| [plugins/](plugins/byu-faculty-integrations/README.md) | The Codex plugin installed in step 1 |
+| [facilitator/](facilitator/) | Presenter run of show, pilot checklist and maintenance notes |

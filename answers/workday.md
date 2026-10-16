@@ -1,6 +1,6 @@
-# Workday Tutorial: Worked Answers
+# Workday: Worked Answers
 
-Open this after attempting the prompts.
+Open this after attempting the prompts in [tutorial/4_WORKDAY.md](../tutorial/4_WORKDAY.md).
 
 ## Part A
 
