@@ -1,0 +1,80 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+
+import {
+  buildChromeArgs,
+  chromeCandidates,
+  defaultProfileDir,
+  findChromeExecutable,
+} from "../plugins/byu-faculty-integrations/scripts/chrome_session.mjs";
+import {
+  evaluateFunction,
+  summarizePage,
+} from "../plugins/byu-faculty-integrations/scripts/chrome_cdp.mjs";
+import {
+  parseRunnerArgs,
+  extractTaskFunctionSource,
+  validateTaskSource,
+} from "../plugins/byu-faculty-integrations/scripts/browser_task_runner.mjs";
+
+test("profile directories are platform-specific and dedicated", () => {
+  assert.match(defaultProfileDir("darwin", { HOME: "/sample-home" }), /BYU Faculty Productivity/);
+  assert.match(defaultProfileDir("linux", { HOME: "/sample-home" }), /byu-faculty-productivity/);
+  assert.match(defaultProfileDir("win32", { LOCALAPPDATA: "C:\\LocalData" }), /BYUFacultyProductivity/);
+});
+
+test("Chrome candidates cover macOS, Windows, and Linux", () => {
+  assert.ok(chromeCandidates("darwin", { HOME: "/sample-home" }).some((item) => item.includes("Google Chrome.app")));
+  assert.ok(chromeCandidates("win32", { PROGRAMFILES: "C:\\Programs" }).some((item) => item.endsWith("chrome.exe")));
+  assert.ok(chromeCandidates("linux", { HOME: "/sample-home" }).some((item) => item.includes("google-chrome")));
+});
+
+test("explicit Chrome path wins", () => {
+  assert.equal(findChromeExecutable("linux", { CHROME_PATH: "/custom/chrome" }, () => true), "/custom/chrome");
+});
+
+test("launcher always uses localhost port and dedicated profile", () => {
+  const args = buildChromeArgs({ port: 9333, profileDir: "/isolated/profile" });
+  assert.ok(args.includes("--remote-debugging-address=127.0.0.1"));
+  assert.ok(args.includes("--remote-debugging-port=9333"));
+  assert.ok(args.includes("--user-data-dir=/isolated/profile"));
+});
+
+test("page summaries omit full URLs and paths", () => {
+  const summary = summarizePage({ id: "page-1", title: "Safe Page", url: "https://example.edu/private/path?secret=value" });
+  assert.deepEqual(summary, { id: "page-1", title: "Safe Page", origin: "https://example.edu" });
+});
+
+test("browser task runner separates preview and apply flags", () => {
+  assert.deepEqual(
+    parseRunnerArgs(["Course", "task.mjs", "--input", "values.json", "--port", "9333", "--apply"]),
+    {
+      positionals: ["Course", "task.mjs"],
+      flags: { input: "values.json", port: "9333", apply: true },
+    }
+  );
+});
+
+test("browser task runner rejects credential and direct-network access", () => {
+  assert.throws(() => validateTaskSource("document.cookie"), /cookies/);
+  assert.throws(() => validateTaskSource("localStorage.getItem('x')"), /local storage/);
+  assert.throws(() => validateTaskSource("fetch('https://example.test')"), /direct network/);
+  assert.doesNotThrow(() => validateTaskSource("document.querySelector('button').click()"));
+});
+
+test("adaptive evaluation helper is available to the guarded runner", () => {
+  assert.equal(typeof evaluateFunction, "function");
+});
+
+test("task extraction accepts one function and rejects executable module code", () => {
+  const source = "export default async function ({ applyArg }) { return { applyArg }; }";
+  assert.match(extractTaskFunctionSource(source), /^async function/);
+  assert.throws(
+    () => extractTaskFunctionSource("console.log('runs in Node'); export default function () {}"),
+    /only one default-exported function/
+  );
+  assert.throws(
+    () => extractTaskFunctionSource("import fs from 'node:fs'; export default function () {}"),
+    /only one default-exported function/
+  );
+});

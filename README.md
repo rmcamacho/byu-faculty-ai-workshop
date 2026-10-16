@@ -50,10 +50,16 @@ Prompt: “Compare copied assignment instructions with the syllabus AI policy an
 
 Any live demo edit should target this development course explicitly and be verified afterward. The synthetic approval file is exercise data, not authority to change a real student's record. Native accommodations cannot be demonstrated as completed without supported test enrollments.
 
+## Beyond Learning Suite: Kuali and Workday
+
+The repository also includes optional integrations for two more BYU systems, each with its own tutorial and synthetic exercises: [Kuali proposals](integrations/kuali/TUTORIAL.md) (funding search, proposal workspaces and record sync) and [Workday](integrations/workday/TUTORIAL.md) (read-only finance reports and inbox triage). They install as a separate Codex plugin from this repository; start with [integrations/SETUP.md](integrations/SETUP.md). The Kuali skill, funding exercise and browser scripts are borrowed from the ECEN faculty AI tutorial. The Workday skill never approves, submits or creates transactions.
+
 ## Rebuild and checks
 
 Run `python3 build_demo.py` (Python standard library only). It deterministically regenerates 24 students, 192 assessment records, 552 question-part records, expected summaries and the synthetic-data ZIP. Assertions check joins, point ranges, scaling, excluded-work denominators and non-deliverable addresses. It never connects to LS.
 
-Run `python3 scripts/build_workshop.py` to check the answers and create the complete shareable `faculty-ls-workshop-v2.zip` from an explicit allowlist. The archive includes the examples, setup, copy, presenter and participant-pilot guides; it excludes local browser state and intermediate presentation files.
+Run `python3 scripts/check_integrations.py` to check the Kuali and Workday arithmetic, skills and links, and `node --test tests/cli_tools.test.mjs` for the plugin's browser helpers.
+
+Run `python3 scripts/build_workshop.py` to check the answers and create the complete shareable `faculty-ls-workshop-v2.zip` from an explicit allowlist. The archive includes the examples, setup, copy, presenter and participant-pilot guides, and the Kuali and Workday integrations; it excludes local browser state and intermediate presentation files.
 
 Continue with tutorial/START_HERE.md and tutorial/COPY_COURSE.md. Detailed prompts, worked answers and a 20-minute presenter script are included. Run python3 scripts/check_answers.py to independently verify the calculations. The CLI setup guide pins the existing browser plugin; a participant-machine installation and second-faculty copy dry run remain to be tested. See tutorial/PARTICIPANT_PILOT.md.

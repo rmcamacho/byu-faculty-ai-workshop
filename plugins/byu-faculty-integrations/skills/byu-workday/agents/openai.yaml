@@ -1,0 +1,4 @@
+interface:
+  display_name: "BYU Workday"
+  short_description: "Read BYU Workday finances and tasks without approving anything."
+  default_prompt: "Use $byu-workday to summarize my research balances and inbox. Do not approve or submit anything."

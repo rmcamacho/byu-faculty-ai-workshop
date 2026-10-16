@@ -1,0 +1,7 @@
+worktag,worktag_name,worktag_type,period_end,budget,actuals,encumbrances,remaining_balance
+GR-DEMO-01,Adaptive Sensor Interfaces (synthetic NSF award),Grant,2028-06-30,180000,62410,8200,109390
+GR-DEMO-02,Legacy Sensor Calibration (synthetic sponsored award),Grant,2026-12-31,95000,88760,4100,2140
+SU-DEMO-03,Faculty Startup (synthetic),Startup,,150000,151325,0,-1325
+AUX-DEMO-04,Measurement Lab Service Center (synthetic),Auxiliary,,40000,31200,2500,6300
+GF-DEMO-05,Student Research Gift (synthetic),Gift,,25000,3150,0,21850
+Total,,,,490000,336845,14800,138355

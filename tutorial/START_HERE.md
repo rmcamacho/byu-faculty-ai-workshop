@@ -24,3 +24,7 @@ Pass: the assistant lists five homework sets and three quizzes from your actual 
 Use the prompts before opening the worked answers if you want to practice independently. Python 3 is optional: `python3 scripts/check_answers.py` independently checks the included data and expected calculations. It never connects to LS. `python3 build_demo.py` regenerates the original synthetic dataset, and `python3 scripts/build_workshop.py` rebuilds the complete shareable workshop archive.
 
 The synthetic package can be shared without student records. Course questions and source slide decks stay in LS/their existing sharing system; they are not included in the package. Draft outreach remains unsent. The examples never authorize changes to a live course.
+
+## After the workshop
+
+The same inspect–preview–confirm–apply–verify workflow extends to Kuali proposals and Workday finances. See [integrations/README.md](../integrations/README.md) for their tutorials and setup.

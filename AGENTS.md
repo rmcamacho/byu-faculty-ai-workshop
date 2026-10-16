@@ -11,3 +11,9 @@ Check answers with `python3 scripts/check_answers.py`. Regenerate the dataset wi
 expected answers consistent with the stated snapshot, exclusions and grade policy.
 Build the complete shareable ZIP with `python3 scripts/build_workshop.py`; inspect
 its allowlisted contents and verify a clean extraction before distributing it.
+
+Kuali and Workday integrations live in plugins/byu-faculty-integrations and
+integrations/. Their exercise files are synthetic; check them with
+`python3 scripts/check_integrations.py` and `node --test tests/cli_tools.test.mjs`.
+The Workday skill is read-only: never add approval, submission or transaction
+steps. Add any new shareable file to the build_workshop.py allowlist.

@@ -1,0 +1,20 @@
+{
+  "name": "faculty-ls-demo",
+  "interface": {
+    "displayName": "Faculty Workshop Integrations"
+  },
+  "plugins": [
+    {
+      "name": "byu-faculty-integrations",
+      "source": {
+        "source": "local",
+        "path": "./plugins/byu-faculty-integrations"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

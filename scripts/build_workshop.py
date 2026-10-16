@@ -40,6 +40,44 @@ WORKSHOP_FILES = (
     "tutorial/PRESENTER_RUN_OF_SHOW.md",
     "tutorial/SETUP.md",
     "tutorial/START_HERE.md",
+    ".agents/plugins/marketplace.json",
+    "integrations/README.md",
+    "integrations/SETUP.md",
+    "integrations/kuali/ANSWERS.md",
+    "integrations/kuali/TUTORIAL.md",
+    "integrations/kuali/workspace/00_research_profile_intake.md",
+    "integrations/kuali/workspace/00_synthetic_faculty_direction.md",
+    "integrations/kuali/workspace/01_synthetic_constraints.md",
+    "integrations/kuali/workspace/02_dated_backup_nsf_eccs_2026-08-26.md",
+    "integrations/kuali/workspace/03_deliberately_flawed_shortlist.md",
+    "integrations/kuali/workspace/04_concept_note_template.md",
+    "integrations/kuali/workspace/05_proposal_state.md",
+    "integrations/kuali/workspace/06_budget_workbook_summary.csv",
+    "integrations/kuali/workspace/07_budget_justification_excerpt.md",
+    "integrations/kuali/workspace/08_kuali_record_snapshot.md",
+    "integrations/workday/ANSWERS.md",
+    "integrations/workday/TUTORIAL.md",
+    "integrations/workday/workspace/01_finance_overview.csv",
+    "integrations/workday/workspace/01_finance_overview_README.md",
+    "integrations/workday/workspace/02_inbox_snapshot.md",
+    "plugins/byu-faculty-integrations/.codex-plugin/plugin.json",
+    "plugins/byu-faculty-integrations/README.md",
+    "plugins/byu-faculty-integrations/references/browser-task-scripts.md",
+    "plugins/byu-faculty-integrations/references/cli-browser.md",
+    "plugins/byu-faculty-integrations/references/vscode-workflow.md",
+    "plugins/byu-faculty-integrations/scripts/browser_task_runner.mjs",
+    "plugins/byu-faculty-integrations/scripts/chrome_cdp.mjs",
+    "plugins/byu-faculty-integrations/scripts/chrome_session.mjs",
+    "plugins/byu-faculty-integrations/skills/byu-kuali/SKILL.md",
+    "plugins/byu-faculty-integrations/skills/byu-kuali/agents/openai.yaml",
+    "plugins/byu-faculty-integrations/skills/byu-kuali/references/kuali-live-updates.md",
+    "plugins/byu-faculty-integrations/skills/byu-kuali/references/proposal-workspace.md",
+    "plugins/byu-faculty-integrations/skills/byu-workday/SKILL.md",
+    "plugins/byu-faculty-integrations/skills/byu-workday/agents/openai.yaml",
+    "plugins/byu-faculty-integrations/skills/byu-workday/references/finance-reports.md",
+    "plugins/byu-faculty-integrations/skills/byu-workday/references/inbox-tasks.md",
+    "scripts/check_integrations.py",
+    "tests/cli_tools.test.mjs",
 )
 
 
@@ -60,11 +98,8 @@ def main() -> None:
     if manifest.get("synthetic") is not True:
         raise SystemExit("Refusing to package a workshop not marked synthetic")
 
-    subprocess.run(
-        [sys.executable, str(ROOT / "scripts/check_answers.py")],
-        cwd=ROOT,
-        check=True,
-    )
+    for check in ("scripts/check_answers.py", "scripts/check_integrations.py"):
+        subprocess.run([sys.executable, str(ROOT / check)], cwd=ROOT, check=True)
 
     with ZipFile(ARCHIVE, "w", compression=ZIP_DEFLATED, compresslevel=9) as archive:
         for relative_path in WORKSHOP_FILES:
