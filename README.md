@@ -17,7 +17,7 @@ Step 1 installs one Codex plugin with all three skills: `$byu-learning-suite`, `
 
 ## Everything Here Is Synthetic
 
-All students, results, TA hours, approvals, proposals, worktags, amounts, people and tasks are invented. They are not anonymized or derived from real records, and the `example.invalid` addresses cannot deliver mail. The Learning Suite teaching materials are real copies of course content, which stay in Learning Suite and Google Slides and are not included here.
+All students, results, diagnostic answers and working, TA hours, approvals, proposals, worktags, amounts, people and tasks are invented. They are not anonymized or derived from real records, and the `example.invalid` addresses cannot deliver mail. The original diagnostic follow-up questions illustrate specific reasoning mistakes and do not affect the eight-assessment grades. Their cohort patterns are deliberately planted. The Learning Suite teaching materials are real copies of course content, which stay in Learning Suite and Google Slides and are not included here.
 
 Nothing in this repository authorizes a change to a live course, proposal or Workday record. Certification, routing and submission in Kuali, and every approval in Workday, stay with you.
 

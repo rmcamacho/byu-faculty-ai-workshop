@@ -1,0 +1,73 @@
+student_id,check_id,status,submitted_answer,student_work,fictional
+DEMO-01,BRANCH-01,not_submitted,,,True
+DEMO-01,POLARITY-01,not_submitted,,,True
+DEMO-01,BOUNDARY-01,not_submitted,,,True
+DEMO-02,BRANCH-01,answered,8,I_ab = Va/R = 8/1 = 8 mA. I used the voltage at node a across the resistor.,True
+DEMO-02,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-02,BOUNDARY-01,answered,5,The total leaving is 3 + 1 + 1 = 5 mA. I included the current from a to b as another current leaving the supernode.,True
+DEMO-03,BRANCH-01,answered,8,I_ab = Va/R = 8/1 = 8 mA. I used the voltage at node a across the resistor.,True
+DEMO-03,POLARITY-01,answered,-2,"Vn - Vp = 4 V, so Vp = 2 - 4 = -2 V.",True
+DEMO-03,BOUNDARY-01,answered,5,The total leaving is 3 + 1 + 1 = 5 mA. I included the current from a to b as another current leaving the supernode.,True
+DEMO-04,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-04,POLARITY-01,answered,-2,"Vn - Vp = 4 V, so Vp = 2 - 4 = -2 V.",True
+DEMO-04,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-05,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-05,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-05,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-06,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-06,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-06,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-07,BRANCH-01,not_submitted,,,True
+DEMO-07,POLARITY-01,not_submitted,,,True
+DEMO-07,BOUNDARY-01,not_submitted,,,True
+DEMO-08,BRANCH-01,answered,8,I_ab = Va/R = 8/1 = 8 mA. I used the voltage at node a across the resistor.,True
+DEMO-08,POLARITY-01,answered,-2,"Vn - Vp = 4 V, so Vp = 2 - 4 = -2 V.",True
+DEMO-08,BOUNDARY-01,answered,5,The total leaving is 3 + 1 + 1 = 5 mA. I included the current from a to b as another current leaving the supernode.,True
+DEMO-09,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-09,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-09,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-10,BRANCH-01,answered,8,I_ab = Va/R = 8/1 = 8 mA. I used the voltage at node a across the resistor.,True
+DEMO-10,POLARITY-01,answered,-2,"Vn - Vp = 4 V, so Vp = 2 - 4 = -2 V.",True
+DEMO-10,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-11,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-11,POLARITY-01,answered,-2,"Vn - Vp = 4 V, so Vp = 2 - 4 = -2 V.",True
+DEMO-11,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-12,BRANCH-01,answered,8,I_ab = Va/R = 8/1 = 8 mA. I used the voltage at node a across the resistor.,True
+DEMO-12,POLARITY-01,answered,-2,"Vn - Vp = 4 V, so Vp = 2 - 4 = -2 V.",True
+DEMO-12,BOUNDARY-01,answered,5,The total leaving is 3 + 1 + 1 = 5 mA. I included the current from a to b as another current leaving the supernode.,True
+DEMO-13,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-13,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-13,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-14,BRANCH-01,answered,8,I_ab = Va/R = 8/1 = 8 mA. I used the voltage at node a across the resistor.,True
+DEMO-14,POLARITY-01,answered,-2,"Vn - Vp = 4 V, so Vp = 2 - 4 = -2 V.",True
+DEMO-14,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-15,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-15,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-15,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-16,BRANCH-01,answered,8,I_ab = Va/R = 8/1 = 8 mA. I used the voltage at node a across the resistor.,True
+DEMO-16,POLARITY-01,answered,-2,"Vn - Vp = 4 V, so Vp = 2 - 4 = -2 V.",True
+DEMO-16,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-17,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-17,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-17,BOUNDARY-01,answered,5,The total leaving is 3 + 1 + 1 = 5 mA. I included the current from a to b as another current leaving the supernode.,True
+DEMO-18,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-18,POLARITY-01,answered,-2,"Vn - Vp = 4 V, so Vp = 2 - 4 = -2 V.",True
+DEMO-18,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-19,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-19,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-19,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-20,BRANCH-01,answered,8,I_ab = Va/R = 8/1 = 8 mA. I used the voltage at node a across the resistor.,True
+DEMO-20,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-20,BOUNDARY-01,answered,5,The total leaving is 3 + 1 + 1 = 5 mA. I included the current from a to b as another current leaving the supernode.,True
+DEMO-21,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-21,POLARITY-01,answered,-2,"Vn - Vp = 4 V, so Vp = 2 - 4 = -2 V.",True
+DEMO-21,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-22,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-22,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-22,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-23,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-23,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-23,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True
+DEMO-24,BRANCH-01,answered,5,I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.,True
+DEMO-24,POLARITY-01,answered,6,"Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.",True
+DEMO-24,BOUNDARY-01,answered,4,The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.,True

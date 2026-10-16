@@ -9,7 +9,7 @@ node --test tests/cli_tools.test.mjs
 
 `build_workshop.py` runs both answer checkers (`scripts/check_answers.py` for Learning Suite, `scripts/check_integrations.py` for Kuali, Workday, the plugin's skills and every Markdown link), then writes `dist/faculty-ai-workshop.zip` from an explicit allowlist. That ZIP is the attachment for the LS course's Start Here page; participants otherwise download the repository from GitHub. Add any new shareable file to the allowlist, inspect the archive, and test a clean extraction before uploading it. Nothing here connects to Learning Suite, Kuali or Workday.
 
-`python3 scripts/build_demo.py` deterministically regenerates the Learning Suite CSVs, expected summaries and `manifest.json` (24 students, 192 assessment records, 552 question-part records), with assertions on joins, scaling and denominators.
+`python3 scripts/build_demo.py` deterministically regenerates the Learning Suite CSVs, expected summaries and `manifest.json` (24 students, 192 assessment records, 552 question-part records, plus three original diagnostic checks and 72 diagnostic-response records), with assertions on joins, scaling and denominators. Diagnostic responses are original synthetic follow-up work, separate from the copied LS assessments, and do not affect grades.
 
 ## Provenance
 

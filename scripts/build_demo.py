@@ -94,6 +94,47 @@ for i, student in enumerate(students, 1):
             effective_due_at=effective_due, fictional=True))
 write_csv('assessment_results.csv', results)
 write_csv('question_results.csv', detail)
+
+# Original, optional follow-up checks, independent of copied LS questions and grades.
+# These invented responses are not reconstructions of actual student work.
+diagnostic_checks = [
+    dict(check_id='BRANCH-01', concept='Node voltage',
+        prompt='Node a is at 8 V and node b at 3 V relative to ground. A 1 kOhm resistor connects a to b. Find the current from a to b in mA. Show the voltage used across the resistor.',
+        answer_unit='mA', fictional=True),
+    dict(check_id='POLARITY-01', concept='Voltage-source constraint',
+        prompt='An ideal 4 V source has its positive terminal at node p and negative terminal at node n. Vn = 2 V relative to ground. Find Vp in V and write the source constraint.',
+        answer_unit='V', fictional=True),
+    dict(check_id='BOUNDARY-01', concept='Supernodes',
+        prompt='An ideal voltage source joins nodes a and b inside one supernode. The resistor from a to ground carries 3 mA outward and the resistor from b to ground carries 1 mA outward. The voltage source carries 1 mA from a to b, entirely inside the supernode. A current source supplies the supernode. What total current in mA leaves the supernode through its external resistor branches? Explain whether the internal source current belongs in that total.',
+        answer_unit='mA', fictional=True),
+]
+write_csv('diagnostic_checks.csv', diagnostic_checks)
+wrong_students = {
+    'BRANCH-01': {2, 3, 8, 10, 12, 14, 16, 20},
+    'POLARITY-01': {3, 4, 8, 10, 11, 12, 14, 16, 18, 21},
+    'BOUNDARY-01': {2, 3, 8, 12, 17, 20},
+}
+diagnostic_work = {
+    'BRANCH-01': (
+        ('5', 'I_ab = (Va - Vb)/R = (8 - 3)/1 = 5 mA.'),
+        ('8', 'I_ab = Va/R = 8/1 = 8 mA. I used the voltage at node a across the resistor.')),
+    'POLARITY-01': (
+        ('6', 'Vp - Vn = 4 V, so Vp = 2 + 4 = 6 V.'),
+        ('-2', 'Vn - Vp = 4 V, so Vp = 2 - 4 = -2 V.')),
+    'BOUNDARY-01': (
+        ('4', 'The external total is 3 + 1 = 4 mA. The 1 mA from a to b stays inside the boundary.'),
+        ('5', 'The total leaving is 3 + 1 + 1 = 5 mA. I included the current from a to b as another current leaving the supernode.')),
+}
+diagnostic_responses = []
+for i, student in enumerate(students, 1):
+    for check in diagnostic_checks:
+        cid = check['check_id']
+        status = 'not_submitted' if i in (1, 7) else 'answered'
+        answer, work = diagnostic_work[cid][i in wrong_students[cid]]
+        diagnostic_responses.append(dict(student_id=student['student_id'], check_id=cid,
+            status=status, submitted_answer=answer if status=='answered' else '',
+            student_work=work if status=='answered' else '', fictional=True))
+write_csv('diagnostic_responses.csv', diagnostic_responses)
 write_csv('demo_ta_hours.csv', [dict(ta='Demo TA - Circuits', day='Tuesday',
     start='13:00',end='14:00',timezone='America/Denver', location='Demo room (fictional)',
     topics='Node voltage; supernodes; source equivalence', fictional=True)])
@@ -129,14 +170,16 @@ write_csv('expected_concept_summary.csv',[dict(assignment_id=a,concept=c,
     for (a,c),v in concepts.items()])
 
 manifest=dict(title='Faculty LS Demo — Synthetic Student Results',
-    version='2026-10-11-v1',snapshot='2026-10-16T10:00:00-06:00',course_url=COURSE+'/home',
+    version='2026-10-16-v2',snapshot='2026-10-16T10:00:00-06:00',course_url=COURSE+'/home',
     synthetic=True,student_count=len(students),assessment_count=len(assignments),
-    source='Assignment names, maxima, copied due dates, grade scale and selected question structure verified in the development course October 11. All student identities, results, statuses, TA hours and approvals are invented.',
+    source='Assignment names, maxima, copied due dates, grade scale and selected question structure verified in the development course October 11. All student identities, results, statuses, TA hours and approvals are invented. Diagnostic checks and submitted work are original fictional follow-up exercises, separate from the LS assessments.',
+    diagnostics=dict(checks_file='data/diagnostic_checks.csv', responses_file='data/diagnostic_responses.csv', check_count=3, response_rows=72, included_in_grades=False, provenance='Original invented follow-up questions and responses, not answers to the copied LS assessment items. All cohort patterns are deliberately planted.'),
     grading='Demo subset: total points, no drops. Missing overdue work is zero; excused, extension_not_due and submitted_ungraded are excluded from numerator and denominator. UQ3 raw 15 points scale to 100. Full possible total 283.',
     outreach='D or below means D/D-/E: percent <67. D+ (67 to <70) is a separate watch band. This is an explicit demo interpretation, not a university-wide threshold.',
     limitations=['Development courses have no enrolled students or working student gradebook; CSV files are content attachments, not native enrollments or recorded grades.',
         'Source syllabus describes full-course weighted categories and dropped scores; that policy does NOT govern this reduced demo dataset.',
         'Only HW3.3 and UQ3 have problem-level data; do not invent missed questions for other assignments.',
+        'Diagnostic responses join to diagnostic checks by check_id and students by student_id, not to individual LS questions. Their optional completion and answers do not affect grades or the overdue-work queue. Do not infer a specific misconception from a score alone or generalize fictional cohort counts to real students.',
         'Copied lecture links still point to original Google decks. Read them for proposals; do not edit originals during demos.',
         'Native student-specific exceptions and real gradebook analysis require supported test enrollments elsewhere; demonstrate proposed changes locally.',
         'Course questions and source decks are not included in this public repository; do not redistribute copyrighted questions or solutions without permission.'],
@@ -161,4 +204,5 @@ assert next(s for s in summary if s['student_id']=='DEMO-06')['possible']==260
 assert all(s['email'].endswith('@example.invalid') for s in students)
 
 print(json.dumps(dict(students=len(students),assessments=len(assignments),question_rows=len(detail),
+    diagnostic_checks=len(diagnostic_checks),diagnostic_response_rows=len(diagnostic_responses),
     outreach_candidates=[s['student_id'] for s in summary if s['outreach_candidate']],checks='passed'),indent=2))

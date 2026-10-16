@@ -15,40 +15,56 @@ All four are E in this demo scale. DEMO-08 is D+ at 68.26%, reported separately 
 
 Do not add DEMO-04, 05 or 06 to the missing-work queue. DEMO-04 has UQ2 awaiting grading (151.2722/183 = 82.66%, provisional); DEMO-05's HW3.3 extension is not due until October 19 (229.5482/272 = 84.39%); DEMO-06's HW1.2 is excused (212.8510/260 = 81.87%). These are distinct states.
 
+## What the invented wrong answers add
+
+The three questions in [diagnostic_checks.csv](../data/diagnostic_checks.csv) are original follow-up checks, not copied LS assessment questions. [diagnostic_responses.csv](../data/diagnostic_responses.csv) contains the invented submitted answers and working. Join these files on `check_id` and students on `student_id`. None of this diagnostic work changes a grade. DEMO-01 and DEMO-07 did not submit these optional checks; do not add them to the overdue-work queue or infer why they did not respond.
+
+Check each question independently before interpreting a response:
+
+| Check | Correct reasoning | Planted wrong answer and working | Pattern among respondents |
+|---|---|---|---|
+| BRANCH-01 | The resistor connects 8 V to 3 V through 1 kOhm: `(8 - 3)/1 = 5 mA` from a to b. | `8 mA`, using `I_ab = Va/R`. The work omits the voltage at the other end. | 8/22 use this pattern; 14/22 answer correctly; 2/24 did not submit. |
+| POLARITY-01 | The source is positive at p: `Vp - Vn = 4 V`. With `Vn = 2 V`, `Vp = 6 V`. | `-2 V`, from `Vn - Vp = 4 V`. The source constraint is reversed. | 10/22 use this pattern; 12/22 answer correctly; 2/24 did not submit. |
+| BOUNDARY-01 | The external resistor currents total `3 + 1 = 4 mA`. The 1 mA from a to b stays inside the combined boundary. | `5 mA`, adding the internal 1 mA to the external currents. | 6/22 use this pattern; 16/22 answer correctly; 2/24 did not submit. |
+
+These are deliberately planted patterns in a fictional cohort, not estimates of how common these errors are among real students. A useful presentation sentence is: "Ten of the 22 fictional respondents reversed the polarity equation. This student's answer and working suggest that the source constraint is a useful place to check together." Do not say that many real students make this mistake without independent evidence.
+
+DEMO-02 shows the branch-voltage and boundary patterns but answers the polarity check correctly. DEMO-03 shows all three patterns. Choose one manageable next step in each email rather than listing every error. The evidence is stronger than a zero alone, but it still does not show whether the student would explain the idea differently in conversation or whether it caused an error on a different assessment.
+
 ## Draft messages
 
-**DEMO-01 — Let's make a plan for the missing work**
+**DEMO-01 — Build on what is working**
 
 Hi Demo Student 01,
 
-I noticed Homework 3.1, Homework 3.3 and Unit Quiz 2 are missing from this snapshot. Your completed work shows strengths we can build on. Could we review those assignments together online during office hours and choose a manageable next step? For node voltage and supernodes in Homework 3.3, Demo TA - Circuits has a fictional help session Tuesday, 1–2 p.m. Mountain in Demo room. Let's first confirm what can still be completed under the course policy.
+You earned full credit on the node-voltage and DAC parts of Unit Quiz 3, so there is good work here to build on. Homework 3.1, Homework 3.3 and Unit Quiz 2 are marked missing. Could you check whether that record is accurate? Let's open Homework 3.3 together during office hours and choose one manageable next step after checking what the course policy permits. You do not need a finished solution before asking for help.
 
 RMC
 
-**DEMO-02 — Support with the next circuits problem**
+**DEMO-02 — One voltage difference to check together**
 
 Hi Demo Student 02,
 
-Thank you for keeping up with the submissions. The results suggest it would help to work through a few foundational ideas together. Let's pull up Homework 1.2 and Homework 3.3 online, look at your reasoning, and choose one problem to rebuild step by step. Would you visit office hours? Demo TA - Circuits can also help with node voltage and supernodes Tuesday, 1–2 p.m. Mountain in Demo room.
+You've kept up with all eight submissions, and your polarity-check equation was correct. On the separate resistor check, you wrote `I = 8/1 = 8 mA`. That suggests we should check which voltage belongs across the resistor. Its ends are at 8 V and 3 V, so the voltage across it is their difference: 5 V. Let's label both ends of one resistor in Homework 3.3 Q1–Q2 together before writing its current expression. Bring whatever work you have; we can start there.
 
 RMC
 
-**DEMO-03 — Let's review node voltage together**
+**DEMO-03 — A source-polarity check before more algebra**
 
 Hi Demo Student 03,
 
-I'd like to help you get more comfortable with the node-voltage material. Let's open Homework 3.3, starting with Q1–Q2 and then the supernode block Q8–Q10, and talk through how you set up the equations. We can also review the node-voltage part of Unit Quiz 3. Please visit office hours or Demo TA - Circuits' fictional Tuesday 1–2 p.m. Mountain session in Demo room.
+Your Thevenin-equivalence parts in Unit Quiz 3 were successful. On the separate polarity check, your `-2 V` answer came from `Vn - Vp = 4 V`. That suggests the source constraint is a useful next step to check together. The positive terminal is at p, so p is 4 V higher than n: `Vp - Vn = 4 V`, giving 6 V. Try marking the higher-potential terminal first, then let's revisit one source constraint in Homework 3.3's supernode block Q8–Q10. We can take it one equation at a time.
 
 RMC
 
-**DEMO-07 — Checking in about Unit Quiz 3**
+**DEMO-07 — Check the record and build from a successful part**
 
 Hi Demo Student 07,
 
-Unit Quiz 3 is marked missing in this snapshot, while your earlier completed work is stronger. Could you check the quiz status and let me know if that record looks wrong? We can review the situation during office hours and discuss the options under the course policy.
+Unit Quiz 3 is marked missing. Could you check whether that status is accurate? You earned credit on several node-voltage parts and on Homework 3.3 Q10–Q11. Let's build from that work while we discuss the quiz options under the course policy. During office hours, we can compare your setup for Q8–Q9 with your successful Q10 work and choose one next practice step. Bring your setup even if it is unfinished, so we can see where to focus.
 
 RMC
 
 ## Discussion
 
-These are fictional drafts, not messages to real students. The scores do not establish motivation, disability or personal circumstances. A missed problem does not prove a specific misconception: ask to see reasoning. Do not promise an extension or a grade outcome. The TA details are invented for the exercise, not Ryan's actual staffing schedule.
+These are fictional drafts, not messages to real students. Use the response and work excerpt to explain a possible next step, not to diagnose the person or infer motivation, disability or circumstances. The original diagnostic answer may suggest what to check on HW3.3; it does not establish what went wrong on a copied LS question. Do not promise an extension or grade outcome. If helpful for node voltage or supernodes, offer the fictional Demo TA - Circuits session Tuesday, 1–2 p.m. Mountain in Demo room. Those details are invented, not Ryan's actual staffing schedule.

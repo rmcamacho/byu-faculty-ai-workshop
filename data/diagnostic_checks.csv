@@ -1,0 +1,4 @@
+check_id,concept,prompt,answer_unit,fictional
+BRANCH-01,Node voltage,Node a is at 8 V and node b at 3 V relative to ground. A 1 kOhm resistor connects a to b. Find the current from a to b in mA. Show the voltage used across the resistor.,mA,True
+POLARITY-01,Voltage-source constraint,An ideal 4 V source has its positive terminal at node p and negative terminal at node n. Vn = 2 V relative to ground. Find Vp in V and write the source constraint.,V,True
+BOUNDARY-01,Supernodes,"An ideal voltage source joins nodes a and b inside one supernode. The resistor from a to ground carries 3 mA outward and the resistor from b to ground carries 1 mA outward. The voltage source carries 1 mA from a to b, entirely inside the supernode. A current source supplies the supernode. What total current in mA leaves the supernode through its external resistor branches? Explain whether the internal source current belongs in that total.",mA,True

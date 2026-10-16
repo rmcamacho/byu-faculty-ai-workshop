@@ -29,6 +29,8 @@ WORKSHOP_FILES = (
     "data/assessment_results.csv",
     "data/assignments.csv",
     "data/demo_ta_hours.csv",
+    "data/diagnostic_checks.csv",
+    "data/diagnostic_responses.csv",
     "data/expected_concept_summary.csv",
     "data/expected_student_summary.csv",
     "data/kuali/00_research_profile_intake.md",

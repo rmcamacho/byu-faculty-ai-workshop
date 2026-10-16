@@ -86,8 +86,47 @@ for e in read('expected_concept_summary'):
 assert aggregates[('HW3.3','Node voltage')][:2] == [71,154]
 assert aggregates[('HW3.3','Supernodes')][:2] == [46,88]
 assert aggregates[('UQ3','Node voltage')][:2] == [32,46]
+# Original follow-up responses are separate from the eight-assessment grades.
+checks = {r['check_id']: r for r in read('diagnostic_checks')}
+responses = read('diagnostic_responses')
+assert len(checks) == 3 and len(responses) == 72
+assert len({(r['student_id'], r['check_id']) for r in responses}) == 72
+assert {r['student_id'] for r in responses} == {s['student_id'] for s in students}
+# Solve the original check values independently in V/kOhm/mA.
+correct = {'BRANCH-01': (8 - 3) / 1, 'POLARITY-01': 2 + 4,
+           'BOUNDARY-01': 3 + 1}
+# Specific planted operations, rather than every incorrect answer being a diagnosis.
+pattern_answers = {'BRANCH-01': 8 / 1, 'POLARITY-01': 2 - 4,
+                   'BOUNDARY-01': 3 + 1 + 1}
+patterns = Counter()
+answered = Counter()
+for r in responses:
+    cid = r['check_id']
+    assert cid in checks and r['fictional'] == checks[cid]['fictional'] == 'True'
+    if r['status'] == 'not_submitted':
+        assert r['student_id'] in ('DEMO-01', 'DEMO-07')
+        assert r['submitted_answer'] == r['student_work'] == ''
+        continue
+    assert r['status'] == 'answered' and r['student_work'].strip()
+    assert r['student_id'] not in ('DEMO-01', 'DEMO-07')
+    value = float(r['submitted_answer'])
+    assert value in (correct[cid], pattern_answers[cid])
+    answered[cid] += 1
+    if value == pattern_answers[cid]: patterns[cid] += 1
+assert dict(answered) == {cid: 22 for cid in checks}
+assert dict(patterns) == {'BRANCH-01': 8, 'POLARITY-01': 10, 'BOUNDARY-01': 6}
+# Worked messages refer to these particular students' evidence, not an inferred score.
+by_student_check = {(r['student_id'], r['check_id']): r for r in responses}
+assert by_student_check[('DEMO-02', 'BRANCH-01')]['submitted_answer'] == '8'
+assert by_student_check[('DEMO-02', 'POLARITY-01')]['submitted_answer'] == '6'
+assert by_student_check[('DEMO-03', 'POLARITY-01')]['submitted_answer'] == '-2'
+assert 'Vn - Vp = 4 V' in by_student_check[('DEMO-03', 'POLARITY-01')]['student_work']
+manifest = json.loads((root / 'manifest.json').read_text())
+assert manifest['diagnostics']['included_in_grades'] is False
+assert manifest['diagnostics']['response_rows'] == len(responses)
+
 # Check the new worked circuit and reversed-polarity exit ticket, in V/kOhm/mA.
 for va,vb,voltage in [(11/3,2/3,3),(5/3,14/3,-3)]:
     assert math.isclose(va/2+vb/4,2)
     assert math.isclose(va-vb,voltage)
-print('PASS: joins, statuses, deadlines, denominators, four candidates, D+ watch, concept evidence, quiz scaling and both circuit solutions.')
+print('PASS: joins, statuses, deadlines, denominators, four candidates, D+ watch, concept evidence, quiz scaling, diagnostic responses and cohort denominators, and both circuit solutions.')
